@@ -1,3 +1,7 @@
 body {
     background-color: rgb(105, 164, 199);
 }
+
+.button {
+    flex: 50%
+}
