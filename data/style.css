@@ -1,7 +1,33 @@
 body {
-    background-color: rgb(105, 164, 199);
+    background-color: rgb(149, 204, 236);
+}
+
+a {
+    display: flex;
+    font-size: large;
+    color: #fff;
+    font-style: normal;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .button {
-    flex: 50%
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.185);
+    padding: 20px;
+    margin: 32px;
+    width: 80%;
+    align-items: center;
+    flex-direction: column;
+    outline: 2px solid #fff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
