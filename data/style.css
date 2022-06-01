@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(149, 204, 236);
+    background-color: rgb(111, 130, 141);
+    background-image: url(./bg.jpg);
+    background-size: cover;
+    height: 100vh;
 }
 
 a {
@@ -30,10 +33,10 @@ a:hover {
 
 .button {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.185);
+    background-color: rgba(0, 0, 0, 0.466);
     margin: 32px;
     width: 80%;
     align-items: center;
     flex-direction: column;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.274);
 }
