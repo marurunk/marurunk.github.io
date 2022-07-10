@@ -1,0 +1,53 @@
+/* header {
+    outline-width: 0;
+    outline-style: solid;
+    outline-color: white;
+    outline-offset: 10px;
+    
+    animation: line .4s;
+    animation-timing-function:ease-in-out;
+    animation-play-state:running;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-direction:normal;
+    
+}
+
+
+@keyframes line {
+    0% {
+        outline-width: 0;
+        outline-offset: 10px;
+    }
+    100% {
+        outline-width: 6px;
+        outline-offset: 7px;
+    }
+} */
+.title {
+    animation: pulse 2s alternate infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0px 0px 2px rgba(155, 200, 255, 0.05);
+    }
+    100% {
+        text-shadow: 0px 0px 10px rgba(155, 200, 255, 0.8), 0px 1px rgba(0, 0, 0, 0.5);
+    }
+}
+.header-icon {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, .3);
+    animation: icon-pulse 2s ease-in-out 0s infinite alternate;
+}
+
+@keyframes icon-pulse {
+    0% {
+        box-shadow: 0px 0px 2px 6px rgba(255, 255, 255, 0.05);
+    }
+    100% {
+        box-shadow: 0px 0px 12px 6px rgba(255, 255, 255, 0.35);
+    }
+}
