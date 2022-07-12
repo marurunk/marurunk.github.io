@@ -81,7 +81,8 @@ a {
     
 }
 
-a:hover {
+a:hover,
+a:focus-within {
     font-weight: 700;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.733),0 0 7px 5px rgba(0, 255, 255, 0.5) ;
     outline: 2px solid aqua;
@@ -99,10 +100,11 @@ a:hover {
     
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 14px;
-    transition: ease-in .12s all;
+    transition: ease-in .1s all;
 }
 
-.button:hover {
+.button:hover,
+.button:focus-within {
     max-width: 260px;
     
 }
@@ -160,7 +162,7 @@ footer {
 
 .padding-left{
     display: flex;
-    width: 100px;
+    width: 4%;
 }
 
 @media only screen and (max-width:768px) {
@@ -180,4 +182,13 @@ footer {
     .title {
         padding-right: 0;
     }
+
+    .right {
+        
+        position: relative;
+        min-height: 30vh;
+
+
+    }
+
 }
