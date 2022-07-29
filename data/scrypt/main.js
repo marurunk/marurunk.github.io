@@ -4,22 +4,39 @@ const button_list = [
     document.getElementById('Pixiv'),
     document.getElementById('Telegram')
 ]
+let effect3 = new Audio('./data/audio/wave-in.wav');
+let effect5 = new Audio('./data/audio/wave-out.wav');
 
 let principal_character = document.getElementById('principal-character')
 principal_character.oncontextmenu = ()=>{return false}
 
-
-let effect3 = new Audio('./data/audio/wave-in.wav');
-let effect5 = new Audio('./data/audio/wave-out.wav');
-let body = document.getElementsByTagName('body')
+let animation_fadeInit = document.getElementById('init').animate(
+    [
+      { opacity: '0' },
+      { opacity: '1' }
+    ], {
+      fill: 'forwards',
+      duration: 1500
+    });
+    
 
 function init() {
     initSound();
     initButtons();
 
     detectDevice()
-    
-    effect5.play();
+    var playPromise = effect5.play();
+
+    if (playPromise !== undefined) {
+        playPromise.then(_ => {
+            console.log("sound started! :)")
+
+        })
+        .catch(error => {
+            console.log(":( no sound started")
+        });
+    }
+    animation_fadeInit.play()
     
 }
 

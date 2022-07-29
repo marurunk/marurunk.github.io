@@ -6,15 +6,9 @@ body {
     
     background-repeat: no-repeat;
     opacity: 0;
-    animation: fadeout 1.5s ease-in-out 0s 1 normal forwards;
+    animation-timing-function: ease-in-out
 }
 
-@keyframes fadeout {
-    to {
-        opacity: 1;
-    }
-    
-}
 
 header {
     display: flex;
