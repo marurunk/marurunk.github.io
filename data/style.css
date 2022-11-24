@@ -149,7 +149,7 @@ a:focus-within {
 .right img {
     user-select: none;
     position: absolute;
-    height: 100vh;
+    height: 120%;
     z-index: 0;
     opacity: 1;
     transform: translate3d(0,-50px,0);
