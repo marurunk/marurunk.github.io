@@ -10,6 +10,7 @@ let effect5 = new Audio('./data/audio/wave-out.wav');
 let principal_character = document.getElementById('principal-character')
 principal_character.oncontextmenu = ()=>{return false}
 
+// Animation Fade-In
 let animation_fadeInit = document.getElementById('init').animate(
     [
       { opacity: '0' },
@@ -18,7 +19,6 @@ let animation_fadeInit = document.getElementById('init').animate(
       fill: 'forwards',
       duration: 1500
     });
-    
 
 function init() {
     initSound();
@@ -27,6 +27,7 @@ function init() {
     detectDevice()
     var playPromise = effect5.play();
 
+    //Validated if sounds was played
     if (playPromise !== undefined) {
         playPromise.then(_ => {
             console.log("sound started! :)")
