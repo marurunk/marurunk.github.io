@@ -245,8 +245,10 @@ p {
 }
 
 .name {
+    font-size: 1.4rem;
     justify-content: end;
     opacity: 0.6;
+    font-style: italic;
 }
 
 footer {
