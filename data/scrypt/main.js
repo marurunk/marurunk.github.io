@@ -25,8 +25,16 @@ function init() {
     initButtons();
 
     detectDevice()
-    var playPromise = effect5.play();
+    
+    animation_fadeInit.play()
+    
+}
 
+function initSound() {
+    effect3.volume = 1;
+    effect5.volume = 1;
+    
+    var playPromise = effect5.play();
     //Validated if sounds was played
     if (playPromise !== undefined) {
         playPromise.then(_ => {
@@ -37,14 +45,6 @@ function init() {
             console.log(":( no sound started")
         });
     }
-    animation_fadeInit.play()
-    
-}
-
-function initSound() {
-    effect3.volume = 1;
-    effect5.volume = 1;
-
 }
 
 function initButtons() {
