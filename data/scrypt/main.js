@@ -57,14 +57,25 @@ function initButtons() {
 }
 
 function detectDevice(){
-    if (navigator.userAgentData.mobile){
-        console.log("You're a Mobile!!")
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        // El usuario está utilizando un dispositivo móvil
+        console.log(`Your system is Mobile`)
     } else {
-        if (navigator.userAgentData.platform == ""){
-            console.log(`Your platform is hidden.. \n Nice`)
+        if (/Windows/.test(navigator.userAgent)) {
+            // El usuario está utilizando Windows
+            console.log(`Your system is: Windows`)
+        } else if (/Mac OS X/.test(navigator.userAgent)) {
+            // El usuario está utilizando MacOS
+            console.log(`Your system is: MacOS`)
+        } else if (/Linux/.test(navigator.userAgent)) {
+            // El usuario está utilizando Linux
+            console.log(`Your system is: Linux`)
+        
         } else {
-            console.log(`Your system is a: ${navigator.userAgentData.platform}`)
+            // El sistema operativo del usuario no se pudo determinar
+            console.log(`Your platform is hidden.. \n Nice`)
         }
+      
     }
 }
 
