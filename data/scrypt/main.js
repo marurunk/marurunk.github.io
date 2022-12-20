@@ -21,6 +21,8 @@ let animation_fadeInit = document.getElementById('init').animate(
     });
 
 function init() {
+    navigator.permissions.query({ name: 'autoplay-media' })
+    navigator.permissions.query({name: "notifications"})
     initSound();
     initButtons();
 
@@ -79,4 +81,12 @@ function detectDevice(){
     }
 }
 
-window.addEventListener('load', init)
+
+document.onreadystatechange = function() {
+    if (document.readyState === 'complete') {
+        // Código a ejecutar cuando los recursos externos del DOM esté disponible
+        init()
+    }
+  };
+  
+//window.addEventListener('load', init)
