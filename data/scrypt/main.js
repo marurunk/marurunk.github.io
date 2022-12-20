@@ -21,8 +21,6 @@ let animation_fadeInit = document.getElementById('init').animate(
     });
 
 function init() {
-    navigator.permissions.query({ name: 'autoplay-media' })
-    navigator.permissions.query({name: "notifications"})
     initSound();
     initButtons();
 
