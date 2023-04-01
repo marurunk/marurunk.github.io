@@ -1,14 +1,24 @@
 * {    margin: 0px;    padding: 0px;}
 
 body {
-    background-image: linear-gradient(to right, rgba(20,30,50), rgb(43, 51, 76) 20%,rgb(91, 131, 224) );
-    background-size: cover;
-    
-    background-repeat: no-repeat;
+    --pink: #f874ff;
+    --cyan: aqua;
+    --blue: #55b5ff;
     opacity: 0;
     animation-timing-function: ease-in-out
 }
 
+.texture{
+    background-color: rgb(219, 226, 238);
+    background-image: radial-gradient(circle, rgba(0, 33, 104, 0.202) 15%, transparent 16%);
+    /* background-image: linear-gradient(to right, rgb(5, 14, 34), rgb(18, 50, 89) 20%,rgb(28, 104, 185) ); */
+    overflow: hidden;
+    background-size: 32px 32px;
+    background-repeat: repeat;
+    opacity: 1;
+
+    
+}
 
 header {
     display: flex;
@@ -31,20 +41,29 @@ header {
 .main {
     min-height: 85vh;
 }
-.header-icon{
 
+.icon-div {
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
     margin: 0px 60px;
+}
+
+.header-icon{
+    size: 60px;
     size: 60px;
     
-    border: 3px solid #fff;
+    border: 5px solid #fff;
     border-radius: 50%;
     
     background-color: #fff;
     background: none;
     outline: solid 2px rgba(255, 255, 255, 0.4);
     
-    outline-offset: 2px;
+    outline-offset: 6px;
     user-select: none;
     -webkit-user-drag: none;
 
@@ -64,13 +83,6 @@ header {
 
 }
 
-.texture{
-    overflow: hidden;
-    background-repeat: repeat;
-    opacity: 1;
-
-    
-}
 
 a {
     user-select: none;
@@ -78,7 +90,7 @@ a {
     padding: 16px 00px ;
     display: flex;
     justify-content: center;
-    border-radius: 14px;
+    border-radius: 12px;
     
     text-decoration: none;
     font-family:'Segoe UI';
@@ -86,21 +98,40 @@ a {
     font-weight: 350;
     
 
-    color: #fff;
-    outline: 2px solid rgba(255, 255, 255, 0.6);
+    color: #36d0ff;
+    outline: 3px solid rgba(150, 236, 255, 0.8);
     
     transition: ease-in .12s all;
     
 }
 
+
 a:hover,
 a:focus-within {
     font-weight: 700;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.733),0 0 7px 5px rgba(0, 255, 255, 0.5) ;
-    outline: 2px solid aqua;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px rgba(0, 255, 255, 0.5) ;
+    outline: 3px solid aqua;
     color: aqua;
+    border-radius: 22px;
 }
 
+#Instagram a:hover, #Instagram a:focus-within{
+    color: var(--pink);
+    outline: 3px solid var(--pink);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px #ea71ff80 ;   
+}
+
+#Pixiv a:hover, #Pixiv a:focus-within{
+    color: var(--blue);
+    outline: 3px solid var(--blue);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px #7184ff80 ;   
+}
+
+#Telegram a:hover, #Telegram a:focus-within{
+    color: var(--blue);
+    outline: 3px solid var(--blue);
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px #7184ff80 ;   
+}
 
 .button {
     display: flex;
@@ -111,8 +142,8 @@ a:focus-within {
     width: 70%;
     max-width: 240px;
     
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.788);
+    border-radius: 12px;
     transition: ease-in .1s all;
 }
 
@@ -126,7 +157,7 @@ a:focus-within {
 .left {
     display: flex;
     flex-direction: column;
-    padding-left: 8vw;
+    /* padding-left: 8vw; */
     
     /* background-color: rgba(0, 0, 0, 0.254); */
     min-width: 300px;
@@ -178,14 +209,14 @@ a:focus-within {
     }
     100% {
         transform: translate3d(200px,-195px,0);
-
+        
     }
     
 }
 
 
 .about-me {
-    background-color: rgba(3, 0, 32, 0.45);
+    background-color: rgba(0, 4, 32, 0.618);
     flex-direction: column;
     width: 100%;
     align-items: center;
@@ -202,7 +233,7 @@ a:focus-within {
 }
 
 .about-me-content {
-
+    
     width: auto;
 }
 
@@ -252,7 +283,7 @@ p {
 }
 
 footer {
-    background-color: rgba(3, 0, 32, 0.45);
+    background-color: rgba(0, 4, 32, 0.618);
     /* margin-top: 100px; */
     padding: 10px;
     display: flex;

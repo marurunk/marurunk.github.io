@@ -7,8 +7,8 @@ const button_list = [
 let effect3 = new Audio('./data/audio/wave-in.wav');
 let effect5 = new Audio('./data/audio/wave-out.wav');
 
-let principal_character = document.getElementById('principal-character')
-principal_character.oncontextmenu = ()=>{return false}
+// let principal_character = document.getElementById('principal-character')
+// principal_character.oncontextmenu = ()=>{return false}
 
 // Animation Fade-In
 let animation_fadeInit = document.getElementById('init').animate(
