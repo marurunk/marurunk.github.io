@@ -3,7 +3,7 @@
     --cyan: aqua;
     --blue: #55b5ff;
     --bg: #cad2e4;
-    --fg: #8e9ebe;
+    --fg: #0015412b;
     --ft: #000632c1;
     
     --halftone-size: 36px;
@@ -13,13 +13,12 @@
 
 body {
     opacity: 0;
-    animation-timing-function: ease-in-out
+    background-image: linear-gradient(to right, rgb(76 228 238) -37%, rgb(176 202 236) 47%,rgb(56 118 220) 137%);
+    animation-timing-function: ease-in-out;
 }
 
 .texture{
-    background-color: var(--bg);
-    background-image: radial-gradient(circle, var(--fg) 15%, transparent 16%);
-    /* background-image: linear-gradient(to right, rgb(5, 14, 34), rgb(18, 50, 89) 20%,rgb(28, 104, 185) ); */
+    background-image: radial-gradient(circle, var(--fg) 16%, transparent 18%);
     overflow: hidden;
     background-size: var(--halftone-size) var(--halftone-size);
     background-repeat: repeat;
