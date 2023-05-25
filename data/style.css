@@ -3,22 +3,24 @@
     --cyan: aqua;
     --blue: #55b5ff;
     --bg: #cad2e4;
-    --fg: #0015412b;
+    --hft: #062dff2b;
     --ft: #000632c1;
     
     --halftone-size: 36px;
+    --button-border-radius: 16px;
+    --button-border-radius-hover: 20px;
     margin: 0px;    
     padding: 0px;
 }
 
 body {
     opacity: 0;
-    background-image: linear-gradient(to right, rgb(17, 240, 255) -37%, rgb(176 202 236) 47%,rgb(5, 94, 240) 137%);
+    background-image: linear-gradient(to right, rgb(17, 240, 255) -37%, #85baff 47%,rgb(5, 94, 240) 137%);
     animation-timing-function: ease-in-out;
 }
 
 .texture{
-    background-image: radial-gradient(circle, var(--fg) 16%, transparent 18%);
+    background-image: radial-gradient(circle, var(--hft) 16%, transparent 18%);
     overflow: hidden;
     background-size: var(--halftone-size) var(--halftone-size);
     background-repeat: repeat;
@@ -95,14 +97,23 @@ header {
 
 }
 
+a { 
+    text-decoration: none;
+    font-family:'Segoe UI';
+    font-size: 1.1rem;
+    width: 100%;
+    color: #36d0ff;
 
-a {
+
+}
+
+.button a {
     user-select: none;
     width: 100%;
     padding: 16px 00px ;
     display: flex;
     justify-content: center;
-    border-radius: 12px;
+    border-radius: var(--button-border-radius);
     
     text-decoration: none;
     font-family:'Segoe UI';
@@ -118,13 +129,13 @@ a {
 }
 
 
-a:hover,
-a:focus-within {
+.button a:hover,
+.button a:focus-within {
     font-weight: 700;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px rgba(0, 255, 255, 0.5) ;
     outline: 3px solid aqua;
     color: aqua;
-    border-radius: 22px;
+    border-radius: var(--button-border-radius-hover);
 }
 
 #Instagram a:hover, #Instagram a:focus-within{
@@ -155,14 +166,14 @@ a:focus-within {
     max-width: 240px;
     
     background-color: #ffffffe5;
-    border-radius: 12px;
+    border-radius: var(--button-border-radius);
     transition: ease-in .1s all;
 }
 
 .button:hover,
 .button:focus-within {
     max-width: 260px;
-    
+    border-radius: var(--button-border-radius-hover);
 }
 
 
@@ -286,7 +297,6 @@ p {
     font-size: 1.2rem;
     color: #fff;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flex;
     margin-bottom: 0.4rem;
 }
 
