@@ -13,7 +13,7 @@
 
 body {
     opacity: 0;
-    background-image: linear-gradient(to right, rgb(76 228 238) -37%, rgb(176 202 236) 47%,rgb(56 118 220) 137%);
+    background-image: linear-gradient(to right, rgb(17, 240, 255) -37%, rgb(176 202 236) 47%,rgb(5, 94, 240) 137%);
     animation-timing-function: ease-in-out;
 }
 
@@ -30,7 +30,7 @@ body {
 header {
     border: solid #fff;
     border-width: 0px 0px 5px 0px;
-    background-image: linear-gradient(0deg, #08376087 44%, transparent);
+    background-image: linear-gradient(0deg, #03206287 44%, #000e5775);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
