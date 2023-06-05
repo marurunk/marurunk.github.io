@@ -9,8 +9,13 @@
     --halftone-size: 36px;
     --button-border-radius: 16px;
     --button-border-radius-hover: 20px;
+    
+    --icon-size: 2rem;
+    
     margin: 0px;    
     padding: 0px;
+
+
 }
 
 body {
@@ -18,6 +23,137 @@ body {
     background-image: linear-gradient(to right, rgb(17, 240, 255) -37%, #85baff 47%,rgb(5, 94, 240) 137%);
     animation-timing-function: ease-in-out;
 }
+
+header {
+    border: solid #fff;
+    border-width: 0px 0px 5px 0px;
+    background-image: linear-gradient(0deg, #03206287 44%, #000e5775);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 24px;
+
+}
+
+i, .icon {
+    margin: 8px;
+}
+
+a { 
+    text-decoration: none;
+    font-family:'Segoe UI';
+    font-size: 1.1rem;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2px 2px;
+}
+
+h2 {
+    padding-bottom: 30px;
+    display: flex;
+    z-index: 100;
+    align-items: center;
+    font-size: 2.4rem;
+    font-family:  monospace;
+    user-select: none;
+    
+    color: rgba(255, 255, 255, 0.9);
+
+}
+
+p {
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 0.4rem;
+}
+
+footer {
+    flex-direction: column;
+}
+
+
+
+
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+.my-icon {
+    color: white;
+    font-size: var(--icon-size);
+    transition-duration: .2s;
+    transition-property: background-color background color;
+  }
+
+.icon {
+    background-color: #ffffff; /* Define el color de fondo */
+    width: 32px; /* Ajusta el ancho de acuerdo a tus necesidades */
+    height: 32px; /* Ajusta la altura de acuerdo a tus necesidades */
+    mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+.social-icon:hover .fa-instagram {
+    background: linear-gradient(90deg, #f874ff,orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.social-icon:hover .fa-twitter{
+    color: rgb(0, 238, 255);
+}
+.social-icon:hover .icon{
+    background-color: rgb(0, 166, 255);
+}
+.gradient-icon {
+    font-size: 24px;
+    background: linear-gradient(45deg, #ffffff, #ffffff);
+    -webkit-text-fill-color: transparent;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    width: 50%;
+    gap: 1rem;
+}
+
+.social-icon {
+    padding: 0px 0px;
+    border-radius: 22px;
+    padding: 4px 8px;
+    transition: ease-in-out .2s background-color;
+}
+.social-icon:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
 
 .texture{
     background-image: radial-gradient(circle, var(--hft) 16%, transparent 18%);
@@ -31,27 +167,6 @@ body {
     
 }
 
-header {
-    border: solid #fff;
-    border-width: 0px 0px 5px 0px;
-    background-image: linear-gradient(0deg, #03206287 44%, #000e5775);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    align-content: space-around;
-    width: 100%;
-    min-height: 15vh;
-    padding: 10px;
-
-}
-
-.flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 .main {
     min-height: 85vh;
 }
@@ -70,42 +185,42 @@ header {
     size: 60px;
     size: 60px;
     
-    border: 5px solid #fff;
+    border: 3px solid #fff;
     border-radius: 50%;
     
-    background-color: #fff;
-    background: none;
-    outline: solid 2px rgba(255, 255, 255, 0.4);
-    
-    outline-offset: 6px;
     user-select: none;
     -webkit-user-drag: none;
 
 }
 
+.profile-icon{
+    display: flex;
+    position: relative;
+    margin:10px 30px 0px 40px;
+    height: 148px;
+    
+    border: 6px solid #fff;
+    border-radius: 50%;
+    
+    outline: solid 4px rgba(255, 255, 255, 0.4);
+    position: relative;
+    outline-offset: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
 .title {
-    padding-bottom: 8px;
-    padding-right: 20vw;
+    padding-bottom: 0px;
     display: flex;
     z-index: 100;
     align-items: center;
-    font-size: 48px;
+    font-size: 2.8rem;
     font-family:  monospace;
     user-select: none;
-    
+    min-width: 300px;
     color: rgba(255, 255, 255, 0.9);
-
 }
 
-a { 
-    text-decoration: none;
-    font-family:'Segoe UI';
-    font-size: 1.1rem;
-    width: 100%;
-    color: #36d0ff;
-
-
-}
 
 .button a {
     user-select: none;
@@ -178,7 +293,7 @@ a {
 
 
 .left {
-    display: flex;
+    display: none;
     flex-direction: column;
     /* padding-left: 8vw; */
     
@@ -261,44 +376,6 @@ a {
     width: auto;
 }
 
-.profile-icon{
-    display: flex;
-    position: relative;
-    margin:10px 30px 0px 40px;
-    height: 148px;
-    
-    border: 6px solid #fff;
-    border-radius: 50%;
-    
-    background-color: #fff;
-    background: none;
-    outline: solid 4px rgba(255, 255, 255, 0.4);
-    position: relative;
-    outline-offset: 4px;
-    user-select: none;
-    -webkit-user-drag: none;
-
-}
-
-h2 {
-    padding-bottom: 30px;
-    display: flex;
-    z-index: 100;
-    align-items: center;
-    font-size: 2.4rem;
-    font-family:  monospace;
-    user-select: none;
-    
-    color: rgba(255, 255, 255, 0.9);
-
-}
-
-p {
-    font-size: 1.2rem;
-    color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 0.4rem;
-}
 
 .name {
     display: none;
@@ -306,10 +383,6 @@ p {
     justify-content: end;
     opacity: 0.6;
     font-style: italic;
-}
-
-footer {
-    flex-direction: column;
 }
 
 .email {
@@ -330,13 +403,21 @@ footer {
     }
     header {
         flex-direction: column;
-        gap: 20px;
         padding-top: 20px;
     }
-
-    .flex {
-        flex-direction: column;
+    .wrap {
+        flex-wrap: wrap;
+        gap: 20px;
     }
+
+    .hidden-mobile {
+        display: none;
+    }
+
+    .hidden-desktop {
+        display: flex;
+    }
+
 
     .title {
         padding-right: 0;
@@ -374,4 +455,10 @@ footer {
 
     }
 
+}
+
+@media only screen and (max-width:1024px) {
+    .hidden-tablet{
+        display: none;
+    }
 }
