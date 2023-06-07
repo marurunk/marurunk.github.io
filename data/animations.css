@@ -12,8 +12,8 @@
     --header-icon-progile-size: 60px; /* and 70px */
     
     
-    --icon-size: 2rem;
-    --icon-size-g: 2.5rem;
+    --icon-size-m: 2.5em;
+    --icon-size-xl: 2.9rem;
 
     --social-button-size: 2.2rem;
 
@@ -107,66 +107,66 @@
 
 /* SOCIAL MEDIA MOBILE */
 
-.section-social-media div a{
-}
 
-.section-social-media:nth-child(1) a{
+
+#mobile-pixiv a{
     animation: social-button-mobile 2s ease-in-out infinite alternate;
-    animation-delay: 0s;
+
 }
 
-.section-social-media:nth-child(2) a{
-    animation: social-button-mobile 2s ease-in-out infinite alternate;
-    animation-delay: 500ms;
-}
-
-.section-social-media:nth-child(2) a div{
+#mobile-pixiv a div{
     animation: social-button-mobile-div 2s ease-in-out infinite alternate;
-    animation-delay: 500ms;
+
 }
 
-
-.section-social-media:nth-child(3) a{
+#mobile-instagram a{
     animation: social-button-mobile 2s ease-in-out infinite alternate;
-    animation-delay: 100s;
+    animation-delay: 0.6s;
+
+}
+
+#mobile-twitter a{
+    animation: social-button-mobile 2s ease-in-out infinite alternate;
+    animation-delay: 1s;
+
 }
 
 @keyframes social-button-mobile {
     0%{
         padding: 10px;
-        font-size: var(--icon-size);
+        font-size: var(--icon-size-m);
     }
     30%{
         padding: 10px;
-        font-size: var(--icon-size);
+        font-size: var(--icon-size-m);
     }
     98%{
         padding: 15px;
-        font-size: var(--icon-size-g);
+        font-size: var(--icon-size-xl);
         
     }
     100%{
         padding: 15px;
-        font-size: var(--icon-size-g);
+        font-size: var(--icon-size-xl);
         
     }
 }
 @keyframes social-button-mobile-div {
     0%{
-        width: var(--icon-size);
-        height: var(--icon-size);
-    }
-    30%{
-        width: var(--icon-size);
-        height: var(--icon-size);
-    }
-    98%{
         width: var(--icon-size-g);
         height: var(--icon-size-g);
+    }
+    30%{
+        width: var(--icon-size-g);
+        height: var(--icon-size-g);
+    }
+    98%{
+        width: var(--icon-size-xl);
+        height: var(--icon-size-xl);
         
     }
     100%{
-        width: var(--icon-size-g);
-        height: var(--icon-size-g);
+        width: var(--icon-size-xl);
+        height: var(--icon-size-xl);
     }
 }
