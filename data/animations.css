@@ -1,3 +1,27 @@
+:root{
+    --pink: #f874ff;
+    --cyan: aqua;
+    --blue: #2e93ff;
+    --bg: #cad2e4;
+    --hft: #062dff2b;
+    --ft: #000632c1;
+    
+    --halftone-size: 36px;
+    --button-border-radius: 50%;
+    
+    --header-icon-progile-size: 60px; /* and 70px */
+    
+    
+    --icon-size: 2rem;
+    --icon-size-g: 2.5rem;
+
+    --social-button-size: 2.2rem;
+
+    --profile-header-size: 58px;
+    --profile-header-size-2: 64px;
+
+}
+
 /* header {
     outline-width: 0;
     outline-style: solid;
@@ -45,7 +69,7 @@
 
 .header-icon {
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, .3);
-    animation: icon-pulse 1.7s ease-in-out 0s infinite alternate;
+    animation: icon-pulse 2.5s ease-in-out 0s infinite alternate;
 }
 
 @keyframes icon-pulse {
@@ -53,16 +77,96 @@
         box-shadow: 0px 0px 2px 6px rgba(255, 255, 255, 0.05);
         outline-offset: 6px;
         border-width: 5px;
+        width: var(--profile-header-size);
+        height: var(--profile-header-size);
     }
-    90% {
-
+    88% {
         box-shadow: 0px 0px 2px 6px rgba(255, 255, 255, 0.05);
         outline-offset: 6px;
         border-width: 5px;
+        width: var(--profile-header-size);
+        height: var(--profile-header-size);
+    }
+    95% {
+
+        box-shadow: 0px 0px 2px 6px rgba(255, 255, 255, 0.05);
+        outline-offset: 6px;
+        border-width: 10px;
+        width: var(--profile-header-size-2);
+        height: var(--profile-header-size-2);
     }
     100% {
         box-shadow: 0px 0px 12px 6px rgba(255, 255, 255, 0.35);
         outline-offset: 10px;
-        border-width: 8px;
+        border-width: 3px;
+        width: var(--profile-header-size);
+        height: var(--profile-header-size);
+    }
+}
+
+
+/* SOCIAL MEDIA MOBILE */
+
+.section-social-media div a{
+}
+
+.section-social-media:nth-child(1) a{
+    animation: social-button-mobile 2s ease-in-out infinite alternate;
+    animation-delay: 0s;
+}
+
+.section-social-media:nth-child(2) a{
+    animation: social-button-mobile 2s ease-in-out infinite alternate;
+    animation-delay: 500ms;
+}
+
+.section-social-media:nth-child(2) a div{
+    animation: social-button-mobile-div 2s ease-in-out infinite alternate;
+    animation-delay: 500ms;
+}
+
+
+.section-social-media:nth-child(3) a{
+    animation: social-button-mobile 2s ease-in-out infinite alternate;
+    animation-delay: 100s;
+}
+
+@keyframes social-button-mobile {
+    0%{
+        padding: 10px;
+        font-size: var(--icon-size);
+    }
+    30%{
+        padding: 10px;
+        font-size: var(--icon-size);
+    }
+    98%{
+        padding: 15px;
+        font-size: var(--icon-size-g);
+        
+    }
+    100%{
+        padding: 15px;
+        font-size: var(--icon-size-g);
+        
+    }
+}
+@keyframes social-button-mobile-div {
+    0%{
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+    30%{
+        width: var(--icon-size);
+        height: var(--icon-size);
+    }
+    98%{
+        width: var(--icon-size-g);
+        height: var(--icon-size-g);
+        
+    }
+    100%{
+        width: var(--icon-size-g);
+        height: var(--icon-size-g);
     }
 }

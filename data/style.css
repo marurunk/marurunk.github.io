@@ -1,17 +1,21 @@
 * {    
     --pink: #f874ff;
     --cyan: aqua;
-    --blue: #55b5ff;
+    --blue: #2e93ff;
     --bg: #cad2e4;
     --hft: #062dff2b;
     --ft: #000632c1;
     
     --halftone-size: 36px;
-    --button-border-radius: 16px;
-    --button-border-radius-hover: 20px;
+    --button-border-radius: 50%;
+    
+    --header-icon-progile-size: 60px; /* and 70px */
+    
     
     --icon-size: 2rem;
-    
+    --icon-size-g: 2.5rem;
+    --social-button-size: 2.2rem;
+
     margin: 0px;    
     padding: 0px;
 
@@ -37,7 +41,7 @@ header {
 
 }
 
-i, .icon {
+i, .pixiv-icon {
     margin: 8px;
 }
 
@@ -101,6 +105,57 @@ footer {
     display: none;
 }
 
+
+
+.texture{
+    background-image: radial-gradient(circle, var(--hft) 16%, transparent 18%);
+    overflow: hidden;
+    background-size: var(--halftone-size) var(--halftone-size);
+    background-repeat: repeat;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+
+
+
+.icon-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 60px;
+    margin: 0px 60px;
+}
+
+.header-icon{
+    size: 60px;
+    size: 60px;
+    
+    border: 3px solid #fff;
+    border-radius: 50%;
+    
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+
+.title {
+    padding-bottom: 0px;
+    display: flex;
+    z-index: 100;
+    align-items: center;
+    font-size: 2.8rem;
+    font-family:  monospace;
+    user-select: none;
+    min-width: 300px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 .my-icon {
     color: white;
     font-size: var(--icon-size);
@@ -108,25 +163,43 @@ footer {
     transition-property: background-color background color;
   }
 
-.icon {
+.pixiv-icon {
     background-color: #ffffff; /* Define el color de fondo */
-    width: 32px; /* Ajusta el ancho de acuerdo a tus necesidades */
-    height: 32px; /* Ajusta la altura de acuerdo a tus necesidades */
     mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
     mask-repeat: no-repeat;
     mask-size: cover;
     width: var(--icon-size);
     height: var(--icon-size);
 }
+
+
+.my-icon-button {
+    color: white;
+    font-size: var(--icon-size-g);
+    transition-duration: .2s;
+    transition-property: background-color background color;
+  }
+
+.pixiv-icon-button {
+    background-color: #ffffff; /* Define el color de fondo */
+    
+    mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: var(--icon-size-g);
+    height: var(--icon-size-g);
+}
+
+
 .social-icon:hover .fa-instagram {
-    background: linear-gradient(90deg, #f874ff,orange);
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff6658 35%, #ff40c3 70%, #3a89ff 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .social-icon:hover .fa-twitter{
     color: rgb(0, 238, 255);
 }
-.social-icon:hover .icon{
+.social-icon:hover .pixiv-icon{
     background-color: rgb(0, 166, 255);
 }
 .gradient-icon {
@@ -154,204 +227,140 @@ footer {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-
-.texture{
-    background-image: radial-gradient(circle, var(--hft) 16%, transparent 18%);
-    overflow: hidden;
-    background-size: var(--halftone-size) var(--halftone-size);
-    background-repeat: repeat;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    
-}
+/* SECTION MAIN */
 
 .main {
-    min-height: 85vh;
+    min-height: 600px;
+    height: 85vh;
 }
 
-.icon-div {
+
+
+
+/* SECTION SOCIAL MEDIA */
+
+.section-social-media {
+    z-index: 100;
+}
+
+.center {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 60px;
     width: 60px;
-    margin: 0px 60px;
-}
-
-.header-icon{
-    size: 60px;
-    size: 60px;
-    
-    border: 3px solid #fff;
     border-radius: 50%;
-    
-    user-select: none;
-    -webkit-user-drag: none;
-
 }
 
-.profile-icon{
-    display: flex;
+.social-button .pixiv-icon{
+    margin: 0px;
+}
+.social-button {
     position: relative;
-    margin:10px 30px 0px 40px;
-    height: 148px;
     
-    border: 6px solid #fff;
-    border-radius: 50%;
-    
-    outline: solid 4px rgba(255, 255, 255, 0.4);
-    position: relative;
-    outline-offset: 4px;
-    user-select: none;
-    -webkit-user-drag: none;
-
-}
-.title {
-    padding-bottom: 0px;
-    display: flex;
-    z-index: 100;
-    align-items: center;
-    font-size: 2.8rem;
-    font-family:  monospace;
-    user-select: none;
-    min-width: 300px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-
-.button a {
-    user-select: none;
-    width: 100%;
-    padding: 16px 00px ;
-    display: flex;
-    justify-content: center;
-    border-radius: var(--button-border-radius);
+    user-select: pointer;
     
     text-decoration: none;
-    font-family:'Segoe UI';
-    font-size: 1.1rem;
-    font-weight: 350;
     
-
-    color: #36d0ff;
-    outline: 3px solid rgba(150, 236, 255, 0.8);
-    
-    transition: ease-in .12s all;
-    
-}
-
-
-.button a:hover,
-.button a:focus-within {
-    font-weight: 700;
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px rgba(0, 255, 255, 0.5) ;
-    outline: 3px solid aqua;
-    color: aqua;
-    border-radius: var(--button-border-radius-hover);
-}
-
-#Instagram a:hover, #Instagram a:focus-within{
-    color: var(--pink);
-    outline: 3px solid var(--pink);
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px #ea71ff80 ;   
-}
-
-#Pixiv a:hover, #Pixiv a:focus-within{
-    color: var(--blue);
-    outline: 3px solid var(--blue);
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px #7184ff80 ;   
-}
-
-#Telegram a:hover, #Telegram a:focus-within{
-    color: var(--blue);
-    outline: 3px solid var(--blue);
-    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.733),0 0 7px 5px #7184ff80 ;   
-}
-
-.button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    margin: 32px;
-    width: 70%;
-    max-width: 240px;
-    
-    background-color: #ffffffe5;
+    padding: 10px;
     border-radius: var(--button-border-radius);
+    
+    background-color: #0000002e;
+    color: #ffffff;
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    z-index: 100;
     transition: ease-in .1s all;
 }
 
-.button:hover,
-.button:focus-within {
-    max-width: 260px;
-    border-radius: var(--button-border-radius-hover);
+.social-button:hover,
+.social-button:focus-within {
+}
+
+#mobile-instagram {
+    top: -120px;
+    left: -40px;
+}
+#mobile-pixiv {
+    top: -20px;
+    left: 85px;
+}
+#mobile-twitter {
+    left: -150px;
+    bottom: -80px;
 }
 
 
-.left {
-    display: none;
-    flex-direction: column;
-    /* padding-left: 8vw; */
+#mobile-instagram:hover a, #mobile-instagram:focus-within a{
+    color: white;
+    outline: 4px solid white;
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 2%, #ff6658 35%, #f03bb7 70%, #3a6eff 90%);
+
+}
+
+#mobile-pixiv:hover a div, #mobile-pixiv:focus-within a div{
+    background-color: white;
+}
+#mobile-pixiv:hover a, #mobile-pixiv:focus-within a{
+    background-color: var(--blue);
+    color: white;
+    outline: 4px solid white;
+}
+
+#mobile-twitter:hover a, #mobile-twitter:focus-within a{
     
-    /* background-color: rgba(0, 0, 0, 0.254); */
-    min-width: 300px;
-    flex: 40%;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
+    background-color: rgb(0, 195, 255);
+    outline: 4px solid white;
+    color: white;
 }
 
-.right {
-    padding-right: 5vw;
+
+
+
+
+/* CHARACTER SPRITE SECTION */
+
+
+.section-social-media-character {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background-color: transparent;
-    flex: 45%;
-    position: relative;
+    
+    width: 0px;
+    height: 0px;
 
 }
 
-.right img {
+#social-media-character {
     user-select: none;
     position: absolute;
-    height: 120%;
+    height: 95vh;
+    min-height: 700px;;
     z-index: 0;
     opacity: 1;
-    transform: translate3d(0,-50px,0);
+    transform: translate3d(-100px,0px,0);
     -webkit-user-drag: none;
-    animation: character-float ease-in-out 2.5s 0s infinite alternate forwards;
-    
-}
-
-@keyframes character-float {
-    0% {
-        transform: translate3d(0,-40px,0);
-        
-    }
-    100% {
-        transform: translate3d(0,-30px,0);
-
-    }
+    animation: character-float ease-in-out 4s 0s infinite alternate forwards;
     
 }
 
 @keyframes character-float-mobile {
     0% {
-        transform: translate3d(200px,-205px,0);
+        transform: translate3d(-100px,-20px,0);
         
     }
     100% {
-        transform: translate3d(200px,-195px,0);
+        transform: translate3d(-100px,-1px,0);
         
     }
     
 }
 
+
+
+
+/* FOOTER SECTION */
 
 .about-me {
     background-color: var(--ft);
@@ -376,6 +385,28 @@ footer {
     width: auto;
 }
 
+.about-me-content a {
+    color: var(--cyan);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.footer-profile-icon{
+    display: flex;
+    position: relative;
+    margin:10px 30px 0px 40px;
+    height: 148px;
+    
+    border: 6px solid #fff;
+    border-radius: 50%;
+    
+    outline: solid 4px rgba(255, 255, 255, 0.4);
+    position: relative;
+    outline-offset: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
 
 .name {
     display: none;
@@ -397,8 +428,12 @@ footer {
     width: 4%;
 }
 
+
+
+/* RESPONSIVE SECTION */
+
 @media only screen and (max-width:768px) {
-    .left{
+    .section-social-media{
         padding-left: 0px;
     }
     header {
@@ -423,17 +458,15 @@ footer {
         padding-right: 0;
     }
 
-    .right {
+    .section-social-media-character {
         
         position: relative;
         min-height: 30vh;
 
     }
-    .right img {
-        transform: translate3d(200px,-200px,0);
+    #social-media-character{
         animation-name: character-float-mobile;
-        height: 120vh;
-        opacity: .5;
+        opacity: .99;
         mix-blend-mode:hard-light;
     }
     
