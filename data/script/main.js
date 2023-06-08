@@ -1,8 +1,8 @@
 const button_list = [
-    document.getElementById('Instagram'),
-    document.getElementById('Twitter'),
-    document.getElementById('Pixiv'),
-    document.getElementById('Telegram')
+    document.getElementById('mobile-instagram'),
+    document.getElementById('mobile-twitter'),
+    document.getElementById('mobile-pixiv'),/* 
+    document.getElementById('Telegram') */
 ]
 let effect3 = new Audio('./data/audio/wave-in.wav');
 let effect5 = new Audio('./data/audio/wave-out.wav');
