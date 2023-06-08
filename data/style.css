@@ -220,6 +220,7 @@ footer {
 
 .social-icon:hover .fa-instagram {
     background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff6658 35%, #ff40c3 70%, #3a89ff 90%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
