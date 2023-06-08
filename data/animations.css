@@ -12,42 +12,18 @@
     --header-icon-progile-size: 60px; /* and 70px */
     
     
-    --icon-size-m: 2.5em;
+    --icon-size: 2rem;
+    --icon-size-m: 2.6em;
+    --icon-size-g: 2.8rem;
     --icon-size-xl: 2.9rem;
 
     --social-button-size: 2.2rem;
 
     --profile-header-size: 58px;
     --profile-header-size-2: 64px;
-
+    --social-button-duration: 1.2s
 }
 
-/* header {
-    outline-width: 0;
-    outline-style: solid;
-    outline-color: white;
-    outline-offset: 10px;
-    
-    animation: line .4s;
-    animation-timing-function:ease-in-out;
-    animation-play-state:running;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-    animation-direction:normal;
-    
-}
-
-
-@keyframes line {
-    0% {
-        outline-width: 0;
-        outline-offset: 10px;
-    }
-    100% {
-        outline-width: 6px;
-        outline-offset: 7px;
-    }
-} */
 .title {
     animation: pulse 2s alternate infinite;
     animation-timing-function: ease-in-out;
@@ -110,43 +86,95 @@
 
 
 #mobile-pixiv a{
-    animation: social-button-mobile 2s ease-in-out infinite alternate;
+    animation: social-button-mobile-pixiv var(--social-button-duration) ease-in-out infinite alternate;
 
 }
 
 #mobile-pixiv a div{
-    animation: social-button-mobile-div 2s ease-in-out infinite alternate;
+    animation: social-button-mobile-div var(--social-button-duration) ease-in-out infinite alternate;
 
 }
 
-#mobile-instagram a{
-    animation: social-button-mobile 2s ease-in-out infinite alternate;
-    animation-delay: 0.6s;
-
-}
 
 #mobile-twitter a{
-    animation: social-button-mobile 2s ease-in-out infinite alternate;
-    animation-delay: 1s;
+    animation: social-button-mobile-twitter var(--social-button-duration) ease-in-out infinite alternate;
+    animation-delay: calc(var(--social-button-duration) / 1.5);
 
 }
 
-@keyframes social-button-mobile {
+.instagram-div {
+    animation: social-button-mobile-insta var(--social-button-duration) ease-in-out infinite alternate;
+    animation-delay: calc(var(--social-button-duration) / 3);
+
+}
+
+@keyframes social-button-mobile-insta {
     0%{
         padding: 10px;
-        font-size: var(--icon-size-m);
+        font-size: var(--icon-size-g);
     }
-    30%{
+    70%{
         padding: 10px;
-        font-size: var(--icon-size-m);
+        font-size: var(--icon-size-g);
     }
     98%{
-        padding: 15px;
+        color: white;
+        padding: 12px;
         font-size: var(--icon-size-xl);
         
     }
     100%{
-        padding: 15px;
+        color: white;
+        padding: 12px;
+        font-size: var(--icon-size-xl);
+        
+    }
+}
+
+@keyframes social-button-mobile-pixiv {
+    0%{
+        padding: 10px;
+        font-size: var(--icon-size-g);
+    }
+    70%{
+        padding: 10px;
+        font-size: var(--icon-size-g);
+    }
+    98%{
+        background-color: var(--blue);
+        color: white;
+        padding: 12px;
+        font-size: var(--icon-size-xl);
+        
+    }
+    100%{
+        background-color: var(--blue);
+        color: white;
+        padding: 12px;
+        font-size: var(--icon-size-xl);
+        
+    }
+}
+@keyframes social-button-mobile-twitter {
+    0%{
+        padding: 10px;
+        font-size: var(--icon-size-g);
+    }
+    70%{
+        padding: 10px;
+        font-size: var(--icon-size-g);
+    }
+    98%{
+        background-color: rgb(0, 195, 255);
+        color: white;
+        padding: 12px;
+        font-size: var(--icon-size-xl);
+        
+    }
+    100%{
+        background-color: rgb(0, 195, 255);
+        color: white;
+        padding: 12px;
         font-size: var(--icon-size-xl);
         
     }
@@ -156,7 +184,7 @@
         width: var(--icon-size-g);
         height: var(--icon-size-g);
     }
-    30%{
+    70%{
         width: var(--icon-size-g);
         height: var(--icon-size-g);
     }

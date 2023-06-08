@@ -13,11 +13,11 @@
     
     
     --icon-size: 2rem;
-    --icon-size-g: 2.5rem;
-    --social-button-size: 2.2rem;
-    
-    --icon-size-m: 2.5em;
+    --icon-size-m: 2.6em;
+    --icon-size-g: 2.8rem;
     --icon-size-xl: 2.9rem;
+
+    --social-button-size: 2.2rem;
 
     margin: 0px;    
     padding: 0px;
@@ -41,6 +41,16 @@ header {
     justify-content: space-around;
     width: 100%;
     padding: 24px;
+
+}
+
+img {
+    user-select: none;
+    color: white;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
@@ -102,6 +112,12 @@ footer {
 
 .row {
     flex-direction: row;
+}
+
+.center {
+    position: relative;
+    height: 60px;
+    width: 60px;
 }
 
 .hidden-desktop {
@@ -168,9 +184,14 @@ footer {
 
 .pixiv-icon {
     background-color: #ffffff; /* Define el color de fondo */
+    
     mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
     mask-repeat: no-repeat;
     mask-size: cover;
+    -webkit-mask-image: url("./img/pixiv-icon.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    
     width: var(--icon-size);
     height: var(--icon-size);
 }
@@ -180,7 +201,7 @@ footer {
     color: white;
     font-size: var(--icon-size-g);
     transition-duration: .2s;
-    transition-property: background-color background color;
+    transition-property: background-color background-image color;
   }
 
 .pixiv-icon-button {
@@ -189,6 +210,10 @@ footer {
     mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
     mask-repeat: no-repeat;
     mask-size: cover;
+    -webkit-mask-image: url("./img/pixiv-icon.png");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+
     width: var(--icon-size-g);
     height: var(--icon-size-g);
 }
@@ -246,72 +271,65 @@ footer {
     z-index: 100;
 }
 
-.center {
-    position: relative;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-}
-
 .social-button .pixiv-icon{
     margin: 0px;
 }
 .social-button {
     position: relative;
-    
     user-select: pointer;
-    
     text-decoration: none;
     
-    padding: 10px;
+    font-size: var(--icon-size-g);
     border-radius: var(--button-border-radius);
     
+    padding: 10px;
     background-color: #0000002e;
     color: #ffffff;
     outline: 3px solid rgba(255, 255, 255, 0.8);
-    z-index: 100;
-    transition: ease-in .1s all;
+    transition: ease-in .2s all;
 }
 
-.social-button:hover,
-.social-button:focus-within {
+.social-button:hover {
+    outline: 4px solid white;
+    background-color: #00000000;
 }
+
+.instagram-div {
+    padding: 10px;
+    border-radius: var(--button-border-radius);
+    width: var(--icon-size-g);
+    height: var(--icon-size-g);
+    transition: 2s ease-in-out background-image;
+    background-image: radial-gradient(circle at 30% 107%, #0000002e 0%);
+
+}
+
 
 #mobile-instagram {
-    top: -120px;
-    left: -40px;
+    top: -130px;
+    left: -50px;
 }
 #mobile-pixiv {
-    top: -20px;
-    left: 85px;
+    top: -40px;
+    left: 75px;
 }
 #mobile-twitter {
-    left: -150px;
-    bottom: -80px;
+    left: -120px;
+    bottom: -10px;
+}
+
+.instagram-div{
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #ff6658 35%, #ff40c3 70%, #3a89ff 90%);
+
 }
 
 
-#mobile-instagram:hover a, #mobile-instagram:focus-within a{
-    color: white;
-    outline: 4px solid white;
-    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 2%, #ff6658 35%, #f03bb7 70%, #3a6eff 90%);
-
-}
-
-#mobile-pixiv:hover a div, #mobile-pixiv:focus-within a div{
-    background-color: white;
-}
-#mobile-pixiv:hover a, #mobile-pixiv:focus-within a{
+#mobile-pixiv a{
     background-color: var(--blue);
-    color: white;
-    outline: 4px solid white;
 }
 
-#mobile-twitter:hover a, #mobile-twitter:focus-within a{
-    
+#mobile-twitter a{
     background-color: rgb(0, 195, 255);
-    outline: 4px solid white;
-    color: white;
 }
 
 
@@ -341,8 +359,6 @@ footer {
     height: 95vh;
     min-height: 700px;;
     z-index: 0;
-    opacity: 1;
-    transform: translate3d(-100px,0px,0);
     -webkit-user-drag: none;
     animation: character-float ease-in-out 4s 0s infinite alternate forwards;
     
@@ -350,15 +366,45 @@ footer {
 
 @keyframes character-float-mobile {
     0% {
-        transform: translate3d(-100px,-20px,0);
+        transform: translate3d(-40px,-10px,0);
         
     }
     100% {
-        transform: translate3d(-100px,-1px,0);
+        transform: translate3d(-40px,-1px,0);
         
     }
     
 }
+
+            /* ART CONTENT SECTION*/
+
+
+.art-content {
+    margin: 24px 0;
+    min-height: 80vh;
+    width: 98%;
+    border-radius: 10px;
+    background: #0006327c;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
