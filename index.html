@@ -24,41 +24,112 @@
 
     <meta name="theme-color" content="#0074ff">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+
     <link rel="stylesheet" href="data/style.css">
     <link rel="stylesheet" href="data/animations.css">
     <link rel="icon" type="image/x-icon" href="data/icon.ico">
 </head>
 <body id="init">
     <div class="texture">
+
+
+        <!-- HEADER & SOCIAL MEDIA-->
     <header>
-        <div class="icon-div">
-            <img class="header-icon" src="data/icon.ico" alt="MarunK Icon" height="60px" width="60px">
+        <div class="flex row wrap">
+            <div class="icon-div">
+                <img class="header-icon" src="data/icon.ico" alt="MarunK Icon" height="60px" width="60px">
+            </div>
+            <h3 class="title">MarunK Art</h3>
         </div>
-        <h3 class="title">MarunK Art</h3>
+
+        <div class="flex row social-icons hidden-mobile">
+            <a class="flex social-icon" target="_blank" href="https://instagram.com/marurunk">
+                <i class="fa-brands fa-instagram my-icon"></i>
+                <span class="hidden-tablet">Instagram</span>
+            </a>
+            <a class="flex social-icon" target="_blank" href="https://www.pixiv.net/en/users/67082420">
+                <div class="pixiv-icon my-icon"></div>
+                <span class="hidden-tablet">Pixiv</span>
+            </a>
+            <a class="flex social-icon" target="_blank" href="https://twitter.com/MarurunK">
+                <i class="fa-brands fa-twitter my-icon"></i>
+                <span class="hidden-tablet">Twitter</span>
+            </a>
+
+        </div>
+
     </header>
-    <section class="flex main">
-        <div class="left">
+
+
+        <!-- SOCIAL MEDIA MOBILE -->
+    <section class="flex main hidden-desktop">
+
+
+        <div class="section-social-media">
             
-            <div class="button instagram" id="Instagram"><a href="http://instagram.com/marurunk">Instagram</a></div>
-            <div class="button twitter" id="Twitter"><a href="https://twitter.com/MarurunK">Twitter</a></div>
-            <div class="button pixiv" id="Pixiv"><a href="https://www.pixiv.net/en/users/67082420">Pixiv</a></div>
-            <div class="button telegram" id="Telegram"><a href="http://t.me/marurunk">Telegram</a></div>
-            
+            <div class="flex center" id="mobile-instagram">
+
+                <div class="flex social-button instagram-div my-icon-button">
+                    <a href="http://instagram.com/marurunk" target="_blank" rel="noopener noreferrer" class=" fa-brands fa-instagram my-icon-button">
+                    </a>
+                </div>
+                
+            </div>
+            <div class="flex center" id="mobile-pixiv">
+                
+                <a href="http://www.pixiv.net/en/users/67082420" target="_blank" rel="noopener noreferrer" class="social-button">
+                    <div class="pixiv-icon-button my-icon-button"></div>
+                </a>
+            </div>
+            <div class="flex center" id="mobile-twitter">
+                <a href="http://twitter.com/MarurunK" target="_blank" rel="noopener noreferrer" class="social-button fa-brands fa-twitter my-icon-button" ></a>
+            </div>
+            <!-- <a href="http://t.me/marurunk" target="_blank" rel="noopener noreferrer" class="social-button fa-brands fa-telegram my-icon-button"></a> -->
+
         </div>
-        <!-- <div class="right">
-            <img 
-            id="principal-character"
-            src="./data/img/maru_sprite.png" 
-            alt="Maru-kun"
-            >
-        </div> -->
+
+
+        <div class="section-social-media-character flex center">
+            <img id="social-media-character" src="./data/img/character-maru.png" alt="floating character">
+        </div>
+
 
     </section>
+        <!-- ART CONTENT (PORFOLIO) -->
+    <section class="flex row art-content">
+
+        <section class="flex col infomation-card">
+            <div class="center flex">
+                <img src="" alt="COMING SOON" width="200px">
+            </div>
+        </section>
+
+        <section class="flex col">
+            <div class="flex row">
+
+            </div>
+            <div class="flex row">
+
+            </div>
+        </section>
+
+    </section>
+
+
+
+
+    <!-- CONTENT PAGE DESKTOP -->
+
+
+
+    <!-- FOOTER CONTENT -->
 
     <section class="flex about-me">
         <div class="flex">
             <div>
-                <img class="profile-icon" src="data/icon.ico" alt="MarunK Profile">
+                <img class="footer-profile-icon" src="data/icon.ico" alt="MarunK Profile">
             </div> 
             <div class="about-me-content">
                 <h2>About Me</h2>
