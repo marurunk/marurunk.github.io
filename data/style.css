@@ -9,7 +9,7 @@
     --halftone-size: 36px;
     --button-border-radius: 50%;
     
-    --header-icon-progile-size: 60px; /* and 70px */
+    --header-icon-progile-size: 60px; 
     
     
     --icon-size: 2rem;
@@ -182,9 +182,9 @@ footer {
   }
 
 .pixiv-icon {
-    background-color: #ffffff; /* Define el color de fondo */
+    background-color: #ffffff; 
     
-    mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
+    mask-image: url("./img/pixiv-icon.png"); 
     mask-repeat: no-repeat;
     mask-size: cover;
     -webkit-mask-image: url("./img/pixiv-icon.png");
@@ -204,9 +204,9 @@ footer {
   }
 
 .pixiv-icon-button {
-    background-color: #ffffff; /* Define el color de fondo */
+    background-color: #ffffff;
     
-    mask-image: url("./img/pixiv-icon.png"); /* Especifica la imagen del icono */
+    mask-image: url("./img/pixiv-icon.png");
     mask-repeat: no-repeat;
     mask-size: cover;
     -webkit-mask-image: url("./img/pixiv-icon.png");
