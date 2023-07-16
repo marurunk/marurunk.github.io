@@ -98,15 +98,26 @@
 
     </section>
         <!-- ART CONTENT (PORFOLIO) -->
-    <section class="flex row art-content">
+    <div class="flex row art-content">
+        <div class="start flex col info-side">
 
-        <section class="flex col infomation-card">
-            <div class="center flex">
-                <img src="" alt="COMING SOON" width="200px">
-            </div>
-        </section>
+        <div class="flex row tabs-box">
+            <button class="end tab-bt">Info Comission</button>
+            <button class="flex tab-bt">Kanban Board</button>
+            <button class="start flex tab-bt">More</button>
+            <div class="tabs-line"></div>
+        </div>
 
-        <section class="flex col">
+        <div class="flex col tabs-container">
+            <section class="tab-content hidden"></section>
+            <section id="trello-board" class="flex wrap row tab-content kanban-info"></section>
+            <section class="tab-content hidden"></section>
+
+        </div>
+
+    </div>
+
+        <section class="flex col illustration-viewer">
             <div class="flex row">
 
             </div>
@@ -115,7 +126,7 @@
             </div>
         </section>
 
-    </section>
+    </div>
 
 
 
