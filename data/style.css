@@ -439,7 +439,7 @@ footer {
 
 .info-side {
     border-radius: var(--section-border-radius) var(--section-border-radius) 4px 4px;
-    background-color: rgba(255, 255, 255, 0.219);
+    background-color: rgba(255, 255, 255, 0.103);
     
     flex-grow: 1;
     min-width: 350px;
@@ -469,6 +469,7 @@ footer {
     border-radius: calc(var(--section-border-radius));
     background-color: rgba(250, 252, 255, 0.938);
     min-height: 100px;
+    max-width: 340px;
 }
 .kanban-list-title {
     color: rgb(15, 37, 109);
@@ -492,12 +493,23 @@ footer {
     border-radius: var(--section-border-radius);
 }
 
+/*  EITQUETAS DE COLOR COLORES WE */
 .yellow_light {
     background-color: rgb(238, 214, 0)
 }
 .pink {
     background-color: var(--pink);
 }
+.black_dark {
+    background-color: rgb(92, 92, 92);
+}
+.red_light {
+    background-color: #ff7373
+}
+.pink_light {
+    background-color: rgb(255, 148, 232);
+}
+
 
 
 

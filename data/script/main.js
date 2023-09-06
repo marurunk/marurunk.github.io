@@ -131,6 +131,7 @@ fetch(trelloLink)
                 card.labels.forEach(function(label){
                     labelsHtml += `<span class="kanban-label ${label.color}">` +label.name + `</span>
                     `;
+                    console.log(label.color + " | " + label.name)
                 });
                 //AGREGAMOS CADA CARTA EN EL HTML CON SUS ETIQUETAS
                 html += `
