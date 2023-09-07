@@ -9,7 +9,7 @@ let effect5 = new Audio('./data/audio/wave-out.wav');
 
 let principal_character = document.getElementById('social-media-character');principal_character.oncontextmenu = ()=>{return false};
 
-
+const trelloLink = "https://trello.com/b/2nSioGdD/marunk-work.json"
 
 function init() {
     initSound();
@@ -81,4 +81,78 @@ document.onreadystatechange = function() {
         init()
     }
   };
-  
+
+// TABS LOGIC
+const tabs = document.querySelectorAll('.tab-bt');
+const info_side = document.querySelectorAll('.tab-content');
+
+tabs.forEach((tab, index)=>{
+    tab.addEventListener('click', (e)=>{
+        tabs.forEach(tab=>{tab.classList.remove('tab-active')});
+        tab.classList.add('tab-active')
+    
+        var line = document.querySelector('.tabs-line');
+        line.style.width = e.target.offsetWidth + "px";
+        line.style.left = e.target.offsetLeft + "px";
+
+        info_side.forEach(content=>{content.classList.add('hidden')})
+        info_side[index].classList.remove('hidden')
+
+
+    })
+
+})
+
+
+// KANBAN BOARD
+
+var trello_labels = ['Instagram', 'Twitter', 'MarunK']
+
+
+fetch(trelloLink)
+  .then(response => response.json())
+  .then(data => {
+
+    let html = ''
+
+    // POR CADA LISTA DE LA TABLA
+    data.lists.forEach(function(list){
+        
+        html += `
+            <div class="flex col kanban-list" id="${list.name.replace(/\s/g, "")}">
+            <h3 class="kanban-list-title">${list.name}</h3>
+        `// INICIAMOS LA LISTA
+        
+        data.cards.forEach(function(card){
+            // FILTRAMOS LAS CARTAS CORRESPONDIENTES A LA LISTA USANDO EL ID DE LA LISTA
+            if (card.idList == list.id){
+                //GENERAMOS EL HTML DE LAS ETIQUETAS
+                var labelsHtml = ""
+                card.labels.forEach(function(label){
+                    labelsHtml += `<span class="kanban-label ${label.color}">` +label.name + `</span>
+                    `;
+                    console.log(label.color + " | " + label.name)
+                });
+                //AGREGAMOS CADA CARTA EN EL HTML CON SUS ETIQUETAS
+                html += `
+                    <div class="flex row wrap kanban-card">
+                        <h4 class="kanban-card-title">${card.name}</h4>
+                        ${labelsHtml}
+                    </div>
+                `;
+            }
+        });
+
+        html += `
+            </div>
+        `  // CERRAMOS EL DIV DE LA LIST
+    });
+
+    //Y FINALMENTE AGREGAMOS AL DOM
+    document.getElementById('trello-board').innerHTML = html;
+
+  })
+  .catch(error => {
+    // Manejo de errores
+    console.log('Trello JSON ERROR:', error);
+  });

@@ -37,7 +37,7 @@
 
         <!-- HEADER & SOCIAL MEDIA-->
     <header>
-        <div class="flex row wrap">
+        <div class="flex row title-column">
             <div class="icon-div">
                 <img class="header-icon" src="data/icon.ico" alt="MarunK Icon" height="60px" width="60px">
             </div>
@@ -98,24 +98,39 @@
 
     </section>
         <!-- ART CONTENT (PORFOLIO) -->
-    <section class="flex row art-content">
+    <div class="flex row art-content">
+        <div class="start flex col info-side">
 
-        <section class="flex col infomation-card">
-            <div class="center flex">
-                <img src="" alt="COMING SOON" width="200px">
+            <div class="flex row tabs-box">
+                <button class="end tab-bt">Info Comission</button>
+                <button class="flex tab-bt">Kanban Board</button>
+                <button class="start flex tab-bt">More</button>
+                <div class="tabs-line"></div>
             </div>
-        </section>
 
-        <section class="flex col">
+            <div class="flex col tabs-container">
+                <section class="tab-content hidden">
+                    <img src="" alt="comming soon" srcset="">
+                </section>
+                <section id="trello-board" class="flex wrap row tab-content kanban-info"></section>
+                <section class="tab-content hidden">
+                    <img src="" alt="comming soon" srcset="">
+                </section>    
+            </div>
+            
+            <img src="data/img/bottom_decorator.gif" alt="decorator" class="hidden-mobile absolute decorator-image">
+        </div>
+
+        <section class="flex col illustration-viewer">
             <div class="flex row">
 
             </div>
             <div class="flex row">
-
+                <img src="" alt="comming soon" srcset="">
             </div>
         </section>
 
-    </section>
+    </div>
 
 
 
@@ -130,7 +145,7 @@
             <div class="about-me-content">
                 <h2>About Me</h2>
                 <p>Beginner Digital Artist, I like to create cool and elegant characters. I also like draw Cutie Art often. Vast intellectual curiosity.</p>
-                <p>I like 💛 <a target="_blank" href="https://youtube.com/watch?v=b6w86ywhN10&amp;feature=share">ONE OK ROCK</a>, Bocchi the Rock!, Anime Artists, Indie Games, Osu!, <a target="_blank" href="https://duolingo.com/profile/marurunk">Duolingo</a>, Godot, Personal Development and Monstercat.</p>
+                <p>I like 💛 <a target="_blank" href="https://youtube.com/watch?v=b6w86ywhN10&amp;feature=share">ONE OK ROCK</a>, Anime Artists, Indie Games, Osu!, <a target="_blank" href="https://duolingo.com/profile/marurunk">Duolingo</a>, Godot, Personal Development and <a target="_blank" href="https://www.youtube.com/watch?v=ZbheiwG6OZA">Monstercat</a>.</p>
                 <p> Greetings Traveler r*$^@*$(^*).</p>
                 <p class="name">MarunK</p>
             </div>
