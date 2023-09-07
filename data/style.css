@@ -41,7 +41,7 @@ header {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    padding: 24px;
+    padding: 12px;
 
 }
 
@@ -131,7 +131,10 @@ footer {
 .hidden-desktop {
     display: none;
 }
-
+ 
+.absolute {
+    position: absolute;
+}
 
 
 .texture{
@@ -375,7 +378,7 @@ footer {
 @keyframes character-float-mobile {
     0% {
         transform: translate3d(-40px,-10px,0);
-        
+            
     }
     100% {
         transform: translate3d(-40px,-1px,0);
@@ -388,21 +391,39 @@ footer {
 
 
 .art-content {
-    margin: 24px 0;
-    padding: 10px;
-    min-height: 42vh;
-    width: 98%;
+    margin: 1.2vh 0;
+    padding: 16px;
+    min-height: 390px;
+    height:82vh;
+    width: calc(100% - 32px - 2.4vh);
     border-radius: var(--section-border-radius);
     background: #0006327c;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: no-wrap;
+    gap: 16px;
 }
+
+.info-side {
+    border-radius: var(--section-border-radius) var(--section-border-radius) calc(var(--section-border-radius) / 1.5) calc(var(--section-border-radius) / 1.5);
+    background-color: #4780afab;
+    
+    flex-grow: 1;
+    min-width: 320px;
+    width: calc(100vw/5);
+    min-height: 380px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+}
+
 
 .tabs-box {
     gap: 1px;
     background-color: rgba(255, 255, 255, 0.911);
     width: 100%;
+    min-height: 32px;
     max-height: 6%;
     position: relative;
 }
@@ -422,6 +443,7 @@ footer {
 
 .tabs-box button:hover {
     background-color: white;
+    min-height: 30px;
 }
 
 .tabs-line {
@@ -437,28 +459,51 @@ footer {
     color:rgb(0, 166, 255)
 }
 
-.info-side {
-    border-radius: var(--section-border-radius) var(--section-border-radius) 4px 4px;
-    background-color: rgba(255, 255, 255, 0.103);
-    
-    flex-grow: 1;
-    min-width: 350px;
-    width: calc(100vw/4);
-    min-height: 300px;
-    height:75vh;
-    overflow: hidden;
-}
 
 .tabs-container {
     width: 100%;
+    height: 100%;
     padding: 10px;
 }
 
+.decorator-image {
+    bottom: 10px;
+    width: 100px;
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+/* KANBAN TABLE TRELLO INFO TO DO LIST*/
+
 .kanban-info {
+    padding-top: 10px;
     align-items: start;
     justify-content: center;
-    width: calc(100% - 20px);
-    gap: 10px;
+    width: calc(100% - 30px);
+    gap: 20px;
+    z-index: 4;
+    margin-bottom: auto;
+}
+
+#Doing {
+    background-color: #ffefaf;   
+}
+#Doing .kanban-list-title {
+    color: rgb(255, 174, 23);
+}
+
+#Done {
+    opacity: 0.80;
+    mix-blend-mode: hard-light;
+}
+
+#Done .kanban-list-title{
+    color: rgb(114, 114, 114);
+}
+
+#Done .kanban-card {
+    color: rgb(112, 112, 112);
 }
 
 .kanban-list {
@@ -470,9 +515,12 @@ footer {
     background-color: rgba(250, 252, 255, 0.938);
     min-height: 100px;
     max-width: 340px;
+    z-index: 4;
+    gap: 4px
 }
 .kanban-list-title {
     color: rgb(15, 37, 109);
+    z-index: 4;
 }
 
 .kanban-card {
@@ -483,6 +531,7 @@ footer {
     padding: 4px 10px;
     background-color: rgba(230, 237, 255, 0.349);
     border-radius: var(--section-border-radius);
+    z-index: 4;
 }
 
 .kanban-label {
@@ -491,22 +540,28 @@ footer {
     color: white;
     padding: 2px 4px;
     border-radius: var(--section-border-radius);
+    z-index: 4;
 }
 
 /*  EITQUETAS DE COLOR COLORES WE */
 .yellow_light {
-    background-color: rgb(238, 214, 0)
+    background-color: rgb(238, 214, 0);
+    z-index: 4;
 }
 .pink {
+    z-index: 4;
     background-color: var(--pink);
 }
 .black_dark {
+    z-index: 4;
     background-color: rgb(92, 92, 92);
 }
 .red_light {
+    z-index: 4;
     background-color: #ff7373
 }
 .pink_light {
+    z-index: 4;
     background-color: rgb(255, 148, 232);
 }
 
@@ -515,15 +570,15 @@ footer {
 
 
 
-
+/*ILLUSTRATION VIEWER SHOW PICTURES ART PORTFOLIO DESIGN SHOWCASE*/
 
 .illustration-viewer {
-    /* background-color: rgba(0, 0, 0, 0.151); */
+    background-color: rgba(0, 3, 41, 0.418);
     border-radius: var(--section-border-radius);
     
     flex-grow: 4;
-    min-width: 400px;
-    height:75vh;
+    min-width: 300px;
+    height:100%;
     min-height: 400px;
 }
 
@@ -635,9 +690,10 @@ footer {
         flex-direction: column;
         padding-top: 20px;
     }
-    .wrap {
-        flex-wrap: wrap;
-        gap: 20px;
+
+    .title-column {
+        flex-direction: column;
+        gap: 20px
     }
 
     .hidden-mobile {
@@ -667,10 +723,13 @@ footer {
     
     .art-content {
         flex-wrap: wrap;
+        min-height: 400px;
+        height: auto;
     }
     .info-side {
         height:auto;
         padding-bottom: 16px;
+        min-height: 300px;
     }
 
     .about-me {

@@ -119,7 +119,7 @@ fetch(trelloLink)
     data.lists.forEach(function(list){
         
         html += `
-            <div class="flex col kanban-list">
+            <div class="flex col kanban-list" id="${list.name.replace(/\s/g, "")}">
             <h3 class="kanban-list-title">${list.name}</h3>
         `// INICIAMOS LA LISTA
         
