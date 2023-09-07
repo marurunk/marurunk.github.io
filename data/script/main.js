@@ -147,7 +147,12 @@ fetch(trelloLink)
             </div>
         `  // CERRAMOS EL DIV DE LA LIST
     });
-
+    // AÑADIMOS EL BOTTON A TRELLO
+    html += `
+    <div class="absolute flex center trello-link">
+    <a  href="https://trello.com/b/2nSioGdD/marunk-work" target="_blank">
+        <img class=" trello-icon " src="data/img/trello.png" alt="" srcset="">
+    </a><div>`
     //Y FINALMENTE AGREGAMOS AL DOM
     document.getElementById('trello-board').innerHTML = html;
 
