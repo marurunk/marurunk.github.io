@@ -23,13 +23,19 @@
     margin: 0px;    
     padding: 0px;
 
+    font-family: 'fuente1', monospace;
+    font-size: 14px;
 
 }
 
 @font-face {
     font-family: 'fuente1';  /* nombre de la fuente */
-    src: url('DejaVuSans.ttf');   /* ubicación de la fuente */
+    src: url('DejaVuSansMono.ttf');   /* ubicación de la fuente */
   }
+  @font-face {
+      font-family: 'fuente2';  /* nombre de la fuente */
+      src: url('DejaVuSansMono-Bold.ttf');   /* ubicación de la fuente */
+    }
 
 body {
     opacity: 0;
@@ -66,7 +72,7 @@ i, .pixiv-icon {
 
 a { 
     text-decoration: none;
-    font-family:'Segoe UI', 'fuente1', monospace;
+    font-family: 'fuente2', monospace;
     font-size: 1.1rem;
     color: #ffffff;
     cursor: pointer;
@@ -88,6 +94,10 @@ h2 {
     
     color: rgba(255, 255, 255, 0.9);
 
+}
+
+h3 {
+    font-family: 'fuente2', monospace;
 }
 
 p {
@@ -411,7 +421,7 @@ footer {
 
 .info-side {
     border-radius: var(--section-border-radius) var(--section-border-radius) calc(var(--section-border-radius) / 1.5) calc(var(--section-border-radius) / 1.5);
-    background-color: #4780afab;
+    background-color: #5f9fd4c7;
     
     flex-grow: 1;
     min-width: 320px;
@@ -486,15 +496,15 @@ footer {
     align-items: start;
     justify-content: center;
     width: calc(100% - 30px);
-    gap: 20px;
+    gap: 1rem;
     z-index: 4;
     margin-bottom: auto;
 }
 
 .trello-icon {
     font-size: 5rem;
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .trello-link {
@@ -505,21 +515,24 @@ footer {
     border-radius: 16px;
     padding: 3px;
     z-index: 5;
-    background-color: #ffffff96
+    background-color: #ffffff96;
 }
 
 .trello-link:hover{
-    background-color: #d0feff
+    background-color: #d0feff;
+    padding: 6px;
 }
 #Doing {
     background-color: #ffefaf;   
 }
 #Doing .kanban-list-title {
-    color: rgb(255, 174, 23);
+    color: rgb(255, 147, 23);
 }
-
+#Doing .kanban-card {
+    background-color: #ffc5787e;
+}
 #Done {
-    opacity: 0.80;
+    opacity: 0.90;
     mix-blend-mode: hard-light;
 }
 
@@ -538,34 +551,44 @@ footer {
     padding: 8px;
     border-radius: calc(var(--section-border-radius));
     background-color: rgba(250, 252, 255, 0.938);
-    min-height: 100px;
+    min-height: 160px;
     max-width: 340px;
     z-index: 4;
-    gap: 4px
+    gap: 4px;
+    align-items: normal;
 }
 .kanban-list-title {
     color: rgb(15, 37, 109);
     z-index: 4;
+    margin-left: 15%;
 }
 
 .kanban-card {
-    gap: 10px;
-    width: 90%;
-    align-items: start;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
     flex-grow: 1;
-    padding: 4px 10px;
-    background-color: rgba(230, 237, 255, 0.349);
-    border-radius: var(--section-border-radius);
+    padding: 4px 0px;
+    background-color: #2154fc3b;
+    border-radius: calc(var(--section-border-radius) / 3);
     z-index: 4;
+    mix-blend-mode: normal;
+}
+
+.kanban-card-title {
+    padding: 0;
+    margin: 0;
 }
 
 .kanban-label {
+    align-items: center;
     font-family: monospace;
-    font-size: 0.7em;
+    font-size: 0.65rem;
     color: white;
-    padding: 2px 4px;
+    margin-bottom: 0.6rem;
     border-radius: var(--section-border-radius);
     z-index: 4;
+    padding: 3px 6px;
 }
 
 /*  EITQUETAS DE COLOR COLORES WE */
