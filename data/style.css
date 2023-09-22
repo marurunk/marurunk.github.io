@@ -5,7 +5,7 @@
     --bg: #cad2e4;
     --hft: #062dff2b;
     --ft: #000632c1;
-    
+    --bg-art-content: #0006327c;
     --halftone-size: 36px;
     --button-border-radius: 50%;
     --section-border-radius: 16px;
@@ -318,12 +318,14 @@ footer {
     background-color: #0000002e;
     color: #ffffff;
     outline: 3px solid rgba(255, 255, 255, 0.8);
-    transition: ease-in .2s all;
+    transition: ease-out .2s all;
 }
 
 .social-button:hover {
-    outline: 4px solid white;
+    outline: 5px solid var(--cyan);
+    color: var(--cyan);
     background-color: #00000000;
+    transform: scale(1.1);
 }
 
 .instagram-div {
@@ -631,11 +633,17 @@ footer {
     margin: 3.5rem 0;
 }
 .more a {
-    margin: 1rem;
+    margin: 1.5rem;
+}
+
+.more .fa-brands, .more .fa-solid, .more .fa-regular {
+    font-size: 2rem;
+}
+.fa-file-pdf {
+    padding: 12px;
 }
 .fa-telegram {
     margin-bottom: 1.2rem;
-    font-size: 2rem;
 }
 .more-text {
     font-size: 1.1rem;
@@ -779,6 +787,15 @@ footer {
         flex-direction: column;
         padding-top: 20px;
     }
+    
+    .art-content {
+        padding-bottom: 6rem;
+        padding-top: 5rem;
+        box-shadow: 0 0 4rem 4rem var(--bg-art-content);
+        margin: 0 0 0 0;
+        width: 100%;
+        border-radius: 0;
+    }
 
     .title-column {
         flex-direction: column;
@@ -819,11 +836,13 @@ footer {
         height:auto;
         padding-bottom: 16px;
         min-height: 300px;
+        margin: 1rem;
     }
 
     .about-me {
         border-radius: 0;
         margin: 0;
+        background-color: #15224a;
     }
 
     .about-me div {
