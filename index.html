@@ -24,14 +24,14 @@
 
     <meta name="theme-color" content="#0074ff">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    
     <link rel="stylesheet" href="data/style.css">
     <link rel="stylesheet" href="data/animations.css">
     <link rel="icon" type="image/x-icon" href="data/icon.ico">
 </head>
 <body id="init">
+    <script src="https://kit.fontawesome.com/e1234d6422.js" crossorigin="anonymous"></script>
     <div class="texture">
 
 
@@ -43,7 +43,7 @@
             </div>
             <h3 class="title">MarunK Art</h3>
         </div>
-
+        
         <div class="flex row social-icons hidden-mobile">
             <a class="flex social-icon" target="_blank" href="https://instagram.com/marurunk">
                 <i class="fa-brands fa-instagram my-icon"></i>
@@ -57,16 +57,16 @@
                 <i class="fa-brands fa-twitter my-icon"></i>
                 <span class="hidden-tablet">Twitter</span>
             </a>
-
+            
         </div>
-
+        
     </header>
 
 
-        <!-- SOCIAL MEDIA MOBILE -->
+    <!-- SOCIAL MEDIA MOBILE -->
     <section class="flex main hidden-desktop">
 
-
+        
         <div class="section-social-media">
             
             <div class="flex center" id="mobile-instagram">
@@ -96,10 +96,10 @@
 
 
     </section>
-        <!-- ART CONTENT (PORFOLIO) -->
+    <!-- ART CONTENT (PORFOLIO) -->
     <div class="flex row art-content">
         <div class="start flex col info-side">
-
+            
             <div class="flex row tabs-box">
                 <button class="end tab-bt">Comission</button>
                 <button class="flex tab-bt">Trello</button>
@@ -110,12 +110,8 @@
             <div class="tabs-container">
                 <section class="flex col tab-content hidden more">
                     <div class="flex col">
-                        <a href="https://drive.google.com/file/d/1y0K1ih3SGsuayPYrRDernkqkQKv2uO4D/view" target="_blank" rel="noopener noreferrer" class="social-button my-icon-button">
-                            <span class="material-symbols-outlined">
-                                description
-                            </span>
-                        </a>
-                            <p class="more-text">I don't know much about comissions yet so, this is my eraser yet. DM me without compromise.</p>
+                        <a href="https://drive.google.com/file/d/1y0K1ih3SGsuayPYrRDernkqkQKv2uO4D/view" target="_blank" rel="noopener noreferrer" class="social-button fa-solid fa-file-pdf my-icon-button"></a>
+                        <p class="more-text">I don't know much about comissions yet so, this is my eraser yet. DM me without compromise.</p>
                     </div>
                     <p class="more-text">Thank you 🤍</p>
                 </section>
@@ -138,9 +134,9 @@
             <img src="data/img/bottom_decorator.gif" alt="decorator" class="hidden-mobile absolute decorator-image">
         </div>
 
-        <section class="flex col illustration-viewer">
+        <section class="flex col illustration-viewer hidden-mobile">
             <div class="flex row">
-
+                
             </div>
             <div class="flex row illustration-content" id="1">
                 <img src="data/img/slides/1.png" alt="comming soon" srcset="">
@@ -153,7 +149,7 @@
 
 
     <!-- FOOTER CONTENT -->
-
+    
     <section class="flex about-me">
         <div class="flex">
             <div>
@@ -173,14 +169,16 @@
         </footer>
     </section>
     </div>
+
 <script src="data/script/main.js"></script>  
 <style>
-    .material-symbols-outlined {
+    .fa-file {
+      font-size: 2rem;
       font-variation-settings:
       'FILL' 0,
       'wght' 700,
       'GRAD' 0,
-      'opsz' 24
+      'opsz' 24;
     }
     </style>  
 </body>
