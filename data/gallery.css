@@ -1,0 +1,31 @@
+
+.gallery-image a img {
+    min-height: 350px;
+    max-height: 350px;
+    min-width: 350px;
+    transition: all 0.2s;
+    transform: scale(1.05) rotate(0deg);
+}
+
+.gallery-image {
+    overflow: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+
+}
+
+.portfolio {
+    display: flex; 
+    gap: 5px;
+    overflow: hidden;
+    margin: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-image a img:hover {
+    transform: scale(1.0) rotate(0deg);
+}
