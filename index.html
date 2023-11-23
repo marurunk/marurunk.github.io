@@ -33,38 +33,51 @@
 
     <link rel="icon" type="image/x-icon" href="data/icon.ico">
 </head>
-<body id="init">
-    <script src="https://kit.fontawesome.com/e1234d6422.js" crossorigin="anonymous"></script>
-    <div class="texture">
+<body id="body">
+<script src="https://kit.fontawesome.com/e1234d6422.js" crossorigin="anonymous"></script>
+<div id="loader"></div>
+<div id="background-illustration" class="flex hidden-mobile">
+    <img src="">
+</div>
+<div class="texture">
 
+    <!--        HOME    -->
 
-        <!-- HEADER & SOCIAL MEDIA-->
-    <header>
-        <div class="flex row title-column">
-            <div class="icon-div">
-                <img class="header-icon" src="data/icon.ico" alt="MarunK Icon" height="60px" width="60px">
+    <section class="presentation row hidden-mobile">
+        <div class="presentation-left">
+            <div id="card" class="col">
+                <div class="card-head flex col">
+                    <div>
+                        <img class="card-profile-icon" src="data/icon.ico" alt="MarunK Profile">
+                    </div> 
+                    <div class="card-name flex">
+                    <a class="card-button flex" href="">MarunK Art</a>
+                    </div>
+                    <div class="card-description flex">
+                    <a class="card-button flex" href="">Anime Ilustrator Entusiast.
+                        Sci-fi - Fantasy</a>
+                    </div>
+                </div>
+                <div class="card-social flex row">
+                    <a class="card-social-button flex" href="instagram.com/marurunk"></a>
+                    <a class="card-social-button flex" href="x.com/marurunk"></a>
+                    <a class="card-social-button flex" href="github.com/marurunk"></a>
+                    <a class="card-social-button flex" href="t.me/marurunk"></a>
+                </div>
+                <div class="card-footer flex"><a class="card-button flex" href="">PORTFOLIO</a></div>
             </div>
-            <h3 class="title">MarunK Art</h3>
         </div>
-        
-        <div class="flex row social-icons hidden-mobile">
-            <a class="flex social-icon" target="_blank" href="https://instagram.com/marurunk">
-                <i class="fa-brands fa-instagram my-icon"></i>
-                <span class="hidden-tablet">Instagram</span>
-            </a>
-            <a class="flex social-icon" target="_blank" href="https://www.pixiv.net/en/users/67082420">
-                <div class="pixiv-icon my-icon"></div>
-                <span class="hidden-tablet">Pixiv</span>
-            </a>
-            <a class="flex social-icon" target="_blank" href="https://twitter.com/MarurunK">
-                <i class="fa-brands fa-twitter my-icon"></i>
-                <span class="hidden-tablet">Twitter</span>
-            </a>
-            
+        <div class="presentation-right">
+            <div id="element-info" class="flex col">
+                <div class="flex">
+                    <h2 class="element-info-title">Element Title</h4>
+                </div>
+                <div class="flex">
+                    <p class="element-info-description">Dolor adipisicing aperiam soluta aliquam autem Animi quidem recusandae at iusto eveniet, corrupti eius quisquam?</p>
+                </div>
+            </div>
         </div>
-        
-    </header>
-
+    </section>
 
     <!-- SOCIAL MEDIA MOBILE -->
     <section class="flex main hidden-desktop">
@@ -99,6 +112,7 @@
 
 
     </section>
+
     <!-- ART CONTENT (PORFOLIO) -->
     <div class="flex row art-content">
         <div class="start flex col info-side">
@@ -134,37 +148,20 @@
                 </section>    
             </div>
             
-            <img src="data/img/bottom_decorator.gif" alt="decorator" class="hidden-mobile absolute decorator-image">
         </div>
 
-        <section class="flex col illustration-viewer hidden-mobile">
-            <div class="flex row">
-                
-            </div>
-            <div class="flex row illustration-content" id="1">
-                <img src="data/img/slides/1.png" alt="comming soon" srcset="">
-            </div>
-        </section>
-
+    <section class="gallery col">
+        <h3 class="gallery-title flex">Illustrations</h3>
+        <div id="gallery" class="portfolio"></div>
+    </section>
+    
     </div>
 
 
 
 
     <!-- FOOTER CONTENT -->
-    <section class="portfolio">
-        <div class="gallery-image">
-            <a data-lightbox="portfolio" data-title="Maru 2023" href="data/img/slides/1.png"><img src="data/img/slides/1.png" alt=""></a>
-        </div>
-        <div class="gallery-image">
-            <a data-lightbox="portfolio" data-title="Teku 2023" href="data/img/slides/2.png"><img src="data/img/slides/2.png" alt=""></a>
-        </div>
-        <div class="gallery-image">
-            <a data-lightbox="portfolio" data-title="Yuki 2023" href="data/img/slides/3.png"><img src="data/img/slides/3.png" alt=""></a>
-        </div>
-        <div class="gallery-image">
-            <a data-lightbox="portfolio" data-title="Nogi 2023" href="data/img/slides/4.png"><img src="data/img/slides/4.png" alt=""></a>
-        </div>
+    <section class="portfolio" id="gallery">
     </section>
     
     <section class="flex about-me">
@@ -196,6 +193,7 @@
             'fadeDuration': 350,
             'resizeDuration': 400,
             'wrapAround': true,
+            'disableScrolling': true,
         })
 </script>
 

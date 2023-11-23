@@ -1,17 +1,25 @@
+:root {
+
+    --theme-accent: #000;
+    --theme-bg-color: #fff;
+    --theme-halftone-color: #00000060;
+    --ft: #00061fa1;
+    --bg-art-content: #0002207c;
+
+    --text-color-accent: #000;
+    --text-color-base: #eeeeeeee;
+
+}
+
 * {    
     --pink: #f874ff;
     --cyan: aqua;
     --blue: #2e93ff;
-    --bg: #cad2e4;
-    --hft: #062dff2b;
-    --ft: #000632c1;
-    --bg-art-content: #0006327c;
     --halftone-size: 36px;
     --button-border-radius: 50%;
     --section-border-radius: 16px;
 
     --header-icon-progile-size: 60px; 
-    
     
     --icon-size: 2rem;
     --icon-size-m: 2.6em;
@@ -25,7 +33,6 @@
 
     font-family: 'fuente1', monospace;
     font-size: 14px;
-
 }
 
 @font-face {
@@ -38,10 +45,146 @@
     }
 
 body {
-    opacity: 0;
-    background-image: linear-gradient(to right, rgb(17, 240, 255) -37%, #85baff 47%,rgb(5, 94, 240) 137%);
+/*    background-image: linear-gradient(to right, rgb(22, 22, 25) -37%, rgb(87, 124, 175) 47%,rgb(20, 20, 24) 137%);*/
+    background-color: var(--theme-bg-color);
     animation-timing-function: ease-in-out;
 }
+
+#loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+#loader span {
+    font-family:  'fuente2';
+    font-size: 5rem;
+    color: #222;
+    font-weight: 400;
+}
+
+#background-illustration {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+
+    overflow: hidden;
+}
+
+#background-illustration img{
+    object-fit: cover;
+    -o-object-fit: cover;
+    height: 100%;
+    min-width: 100%;
+
+    filter: brightness(80%) blur(0px);
+    transform: scale(1.02);
+
+}
+
+.presentation {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+}
+
+.presentation-left {
+    display: flex;
+    flex: 1 1;
+
+}
+
+.presentation-right {
+    display: flex;
+    flex: 2 1;
+    align-items: end;
+}
+
+/* CARD PRESENTATION */
+
+#card {
+    overflow: hidden;
+    margin: 2rem 2.5rem 2rem 7rem;
+    display: flex;
+    background-color: #00000050;
+    border-radius: 0.5rem;
+    flex: 1 1;
+    
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+
+.card-head {
+    flex: 4 1;
+}
+
+.card-profile-icon {
+    margin: 1rem;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    
+    outline: solid 4px #ffffff70;
+    outline-offset: 9px;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+
+.card-name a {
+    padding: 1rem;
+    color: var(--theme-accent);
+    font-size: 2.3rem;
+}
+
+.card-description a {
+    padding: 1rem;
+    color: var(--text-color-base)
+}
+
+.card-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2 1;
+}
+.card-box a {
+}
+
+.card-social-button {
+}
+
+.card-footer {
+    flex: 1 1;
+    background-color: #00000063;
+}
+
+#element-info {
+    background-color: #00000022;
+    flex: 1 1;
+    padding: 1rem;
+}
+
+
+.element-info-title {
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+
+
+.element-info-description {
+    font-size: 1rem;
+
+}
+
+
 
 header {
     border: solid #fff;
@@ -122,6 +265,11 @@ footer {
     align-items: center;
 }
 
+.box {
+    width: 100%;
+    height: 100%;
+}
+
 .start {
     justify-content: start;
 }
@@ -153,7 +301,7 @@ footer {
 
 
 .texture{
-    background-image: radial-gradient(circle, var(--hft) 16%, transparent 18%);
+    background-image: radial-gradient(circle, var(--theme-halftone-color) 16%, transparent 18%);
     overflow: hidden;
     background-size: var(--halftone-size) var(--halftone-size);
     background-repeat: repeat;
@@ -161,6 +309,7 @@ footer {
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: -1;
     
 }
 
@@ -414,31 +563,26 @@ footer {
 
 
 .art-content {
-    margin: 1.2vh 0;
+    overflow: hidden;
+    margin: 5rem 1rem;
     padding: 16px;
-    min-height: 390px;
-    height:82vh;
-    width: calc(100% - 32px - 2.4vh);
+    max-height:80rem;
     border-radius: var(--section-border-radius);
-    background: #0006327c;
-    align-items: center;
+    background: var(--bg-art-content);
+    align-items: stretch;
     justify-content: space-between;
-    flex-wrap: no-wrap;
+    flex-wrap: wrap;
     gap: 16px;
 }
 
 .info-side {
     border-radius: var(--section-border-radius) var(--section-border-radius) calc(var(--section-border-radius) / 1.5) calc(var(--section-border-radius) / 1.5);
-    background-color: #5f9fd4c7;
-    
-    flex-grow: 1;
-    min-width: 320px;
-    width: calc(100vw/4);
+    background-color: #5f9fd430;
+    flex: 1 1 25%;
+    min-width: 200px;
     min-height: 340px;
-    height: 100%;
-    overflow-y: hidden;
-    overflow-x: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -654,32 +798,6 @@ footer {
 }
 
 
-/*ILLUSTRATION VIEWER SHOW PICTURES ART PORTFOLIO DESIGN SHOWCASE*/
-
-.illustration-viewer {
-    background-color: rgba(0, 3, 41, 0.418);
-    border-radius: var(--section-border-radius);
-    
-    flex-grow: 4;
-    min-width: 300px;
-    height:100%;
-    min-height: 400px;
-}
-.illustration-content{ 
-    height: calc(100% - 30px);
-    width: calc(100% - 30px);
-}
-
-.illustration-content img {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    z-index: 1;
-    transition: opacity 0.5s;
-    border-radius: 1.2rem;
-}
-
-
 
 
 
@@ -743,7 +861,6 @@ footer {
     border-radius: 50%;
     
     outline: solid 4px rgba(255, 255, 255, 0.4);
-    position: relative;
     outline-offset: 4px;
     user-select: none;
     -webkit-user-drag: none;
@@ -780,7 +897,11 @@ footer {
 /* RESPONSIVE SECTION */
 
 @media only screen and (max-width:768px) {
-    .section-social-media{
+
+    
+        
+       
+    .section-social-media {
         padding-left: 0px;
     }
     header {
@@ -804,6 +925,7 @@ footer {
 
     .hidden-mobile {
         display: none;
+        visibility: none;
     }
 
     .hidden-desktop {
@@ -829,7 +951,7 @@ footer {
     
     .art-content {
         flex-wrap: wrap;
-        min-height: 400px;
+        max-height: none;
         height: auto;
     }
     .info-side {
@@ -838,6 +960,7 @@ footer {
         min-height: 300px;
         margin: 1rem;
     }
+
 
     .about-me {
         border-radius: 0;
