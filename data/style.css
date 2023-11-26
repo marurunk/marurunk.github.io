@@ -12,6 +12,9 @@
 }
 
 * {    
+    
+    --bg-min-height: 540px;
+
     --pink: #f874ff;
     --cyan: aqua;
     --blue: #2e93ff;
@@ -33,6 +36,14 @@
 
     font-family: 'fuente1', monospace;
     font-size: 14px;
+}
+
+button {
+    background: #00000022;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 8px;
+    cursor: pointer;
 }
 
 @font-face {
@@ -65,13 +76,15 @@ body {
     font-size: 5rem;
     color: #222;
     font-weight: 400;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #background-illustration {
     position: absolute;
     width: 100%;
-    height: 100vh;
-    z-index: 0;
+    height: max(var(--bg-min-height), 100vh);
+    z-index: -1;
 
     overflow: hidden;
 }
@@ -87,43 +100,47 @@ body {
 
 }
 
-.presentation {
+#presentation {
     display: flex;
-    height: 100vh;
+    height: max(var(--bg-min-height), 100vh);
     width: 100%;
     z-index: 1;
     justify-content: center;
+    flex-direction: row;
 }
 
-.presentation-left {
+.presentation-card {
     display: flex;
-    flex: 1 1;
+    flex: 1 1 30%;
 
 }
 
-.presentation-right {
+.presentation-info {
+    flex: 1 4 50%;
     display: flex;
-    flex: 2 1;
     align-items: end;
 }
 
 /* CARD PRESENTATION */
 
 #card {
+    margin: max(1rem , 4%) max(10% , 1rem);
     overflow: hidden;
-    margin: 2rem 2.5rem 2rem 7rem;
     display: flex;
-    background-color: #00000050;
-    border-radius: 0.5rem;
+    background: #00000060;
+    backdrop-filter: blur(4px);
+    align-items: stretch;
+    justify-content: space-between;
+
+    border-radius: 0.9rem;
     flex: 1 1;
     
-    justify-content: space-between;
-    align-items: stretch;
 }
 
 
 .card-head {
     flex: 4 1;
+    padding: 2rem 3rem;
 }
 
 .card-profile-icon {
@@ -138,15 +155,25 @@ body {
 
 }
 
-.card-name a {
-    padding: 1rem;
+
+.card-name h1 {
+    padding: 0.5rem 1rem ;
     color: var(--theme-accent);
     font-size: 2.3rem;
 }
+.card-name button {
+    
+    background: transparent;
+    color: #ffffff88;
+    font-size: 1.2rem;
+}
 
-.card-description a {
-    padding: 1rem;
-    color: var(--text-color-base)
+.card-description p {
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+    color: var(--text-color-base);
+    font-family: 'fuente2', monospace;
+    font-size: 1.2rem;
 }
 
 .card-social {
@@ -154,22 +181,32 @@ body {
     justify-content: center;
     align-items: center;
     flex: 2 1;
+    padding: 0 2rem;
 }
 .card-box a {
 }
 
 .card-social-button {
+    flex: 1 1;
+    max-width: 90px;
 }
 
 .card-footer {
     flex: 1 1;
     background-color: #00000063;
+    min-height: max(7%, 5rem)
 }
-
+.card-footer button {
+    color: var(--text-color-base);
+    font-size: 2.4rem;
+    font-family: "fuente1", monospace;
+    border-radius: 0;
+)
+}
 #element-info {
-    background-color: #00000022;
+    background: radial-gradient(ellipse at bottom, #00000074 44%, #00000000 60%);
     flex: 1 1;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
 
@@ -180,6 +217,8 @@ body {
 
 
 .element-info-description {
+    text-align: center;
+    padding: 0.2rem 5.2rem;
     font-size: 1rem;
 
 }
@@ -244,7 +283,7 @@ h3 {
 }
 
 p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #fff;
     font-family: 'fuente1', monospace;
     margin-bottom: 0.4rem;
@@ -895,7 +934,15 @@ footer {
 }
 
 /* RESPONSIVE SECTION */
-
+@media only screen and (max-width:1024px) {
+    .hidden-tablet{
+        display: none;
+        visibility: none;
+    }
+    #card {
+        margin: 1rem max(10% , 1rem);
+    }
+}
 @media only screen and (max-width:768px) {
 
     
@@ -971,20 +1018,22 @@ footer {
     .about-me div {
      flex-direction: column;
     }
-    p {
+
+    .about-me p {
         opacity: 0.8;
     }
 
-    h2 {
+    .about-me h2 {
         justify-content: center;
         font-size: 3rem;
 
     }
 
+    #card {
+         margin: 0;
+         border-radius: 0;
+    }
+
 }
 
-@media only screen and (max-width:1024px) {
-    .hidden-tablet{
-        display: none;
-    }
-}
+

@@ -62,17 +62,25 @@ const titles = [
 
 const trelloLink = "https://trello.com/b/2nSioGdD/marunk-work.json";
 
-const button_list = [
-    document.getElementById('mobile-instagram'),
-    document.getElementById('mobile-twitter'),
-    document.getElementById('mobile-pixiv'),
-]
+//const button_list = [
+//    document.getElementById('mobile-instagram'),
+//    document.getElementById('mobile-twitter'),
+ //   document.getElementById('mobile-pixiv'),
+//]
 let effect3 = new Audio('./data/audio/wave-in.wav');
 let effect5 = new Audio('./data/audio/wave-out.wav');
 
-let principal_character = document.getElementById('social-media-character');principal_character.oncontextmenu = ()=>{return false};
+let hddElements=document.getElementsByClassName('no-context');for(let element of hddElements){element.oncontextmenu=()=>{return false};}
 
+let presentation = document.getElementById('presentation');
+//presentation.style.flexDirection = "row-reverse";
 let gallery_box = document.getElementById('gallery');
+let username = document.getElementById('username');
+function copyUsername() {
+    navigator.clipboard
+        .writeText(username.innerText)
+        .then(console.log("copied"));
+}
 
 
 function init() {
@@ -90,11 +98,15 @@ function genRandomTheme(total_themes) {
     let x = Math.random() * total_themes;
     x = Math.round(x)
     if ( x == 0 ) { x=x+1; }
-    let loader= document.getElementById('loader')
-    loader.innerHTML = `
-    <span class="flex box">${ELEMENT[x-1]}</span>
-    `;
 
+    let loader= document.getElementById('loader')
+
+    loader.children[0].innerText = `${ELEMENT[x-1]}`;
+    loader.children[0].style.opacity = 1;
+
+    if (x == 3){
+        presentation.style.flexDirection = "row-reverse";
+    }
 
     // SET BACKGROUND THEME
     let bg = document.getElementById('background-illustration').children[0];
@@ -156,12 +168,12 @@ function initSound() {
 }
 
 function initButtons() {
-    button_list.forEach((button)=>{
-        button.addEventListener('click', ()=>{
-            effect3.play()
-        })
+//    button_list.forEach((button)=>{
+ //       button.addEventListener('click', ()=>{
+  //          effect3.play()
+   //     })
     // button.addEventListener( 'pointerenter', ()=>{});
-    })
+  //  })
 }
 
 function genGallery() {

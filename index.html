@@ -22,7 +22,7 @@
     <meta property="twitter:description" content="All pratforms of Artist MarunK" />
     <meta property="twitter:image" content="https://marurunk.github.io/data/img/preview.jpg" />
 
-    <meta name="theme-color" content="#0074ff">
+    <meta name="theme-color" content="#000">
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     
@@ -35,39 +35,52 @@
 </head>
 <body id="body">
 <script src="https://kit.fontawesome.com/e1234d6422.js" crossorigin="anonymous"></script>
-<div id="loader"></div>
-<div id="background-illustration" class="flex hidden-mobile">
-    <img src="">
+<div id="loader">
+    <span class="flex box"></span>
 </div>
 <div class="texture">
 
     <!--        HOME    -->
 
-    <section class="presentation row hidden-mobile">
-        <div class="presentation-left">
+    <section id="presentation">
+<div id="background-illustration" class="flex ">
+    <img src="" class="no-context">
+</div>
+       <div class="presentation-card">
             <div id="card" class="col">
                 <div class="card-head flex col">
                     <div>
-                        <img class="card-profile-icon" src="data/icon.ico" alt="MarunK Profile">
+                        <img class="card-profile-icon no-context" src="data/icon.ico" alt="MarunK Profile">
                     </div> 
-                    <div class="card-name flex">
-                    <a class="card-button flex" href="">MarunK Art</a>
+                    <div class="card-name flex col">
+                    <h1 class="card-button flex">MarunK Art</h1>
+                    <button type="button" id="username" class="card-mention flex row" onclick="copyUsername();" style="color:#ffffff88"><img src="data/svg/mention.svg" alt="">marurunk</button>
                     </div>
-                    <div class="card-description flex">
-                    <a class="card-button flex" href="">Anime Ilustrator Entusiast.
-                        Sci-fi - Fantasy</a>
+                    <div class="card-description flex col">
+                        <p class="card-button flex">Anime Illustrator Enthusiast.</p>
+                        <p class="card-button flex">Sci-fi - Fantasy</p>
                     </div>
                 </div>
                 <div class="card-social flex row">
-                    <a class="card-social-button flex" href="instagram.com/marurunk"></a>
-                    <a class="card-social-button flex" href="x.com/marurunk"></a>
-                    <a class="card-social-button flex" href="github.com/marurunk"></a>
-                    <a class="card-social-button flex" href="t.me/marurunk"></a>
+                    <a class="card-social-button flex" target="_blank" href="https://www.instagram.com/marurunk">
+                        <img src="data/svg/instagram.svg" alt="">
+                    </a>
+                    <a class="card-social-button flex" target="_blank" href="https://twitter.com/marurunk">
+                        <img src="data/svg/twitter.svg" alt="">
+                    </a>
+                    </a>
+                    <a class="card-social-button flex" target="_blank" href="https://t.me/marurunk">
+                        <img src="data/svg/telegram.svg" alt="">
+                    </a>
+                    <a class="card-social-button flex" target="_blank" href="https://pixiv.net/en/users/67082420">
+                        <img src="data/svg/pixiv.svg" alt="">
+                    </a>
+
                 </div>
-                <div class="card-footer flex"><a class="card-button flex" href="">PORTFOLIO</a></div>
+                <div class="card-footer flex"><button type="button" class="card-button flex box">PORTFOLIO</button></div>
             </div>
         </div>
-        <div class="presentation-right">
+        <div class="presentation-info hidden-tablet">
             <div id="element-info" class="flex col">
                 <div class="flex">
                     <h2 class="element-info-title">Element Title</h4>
@@ -80,7 +93,9 @@
     </section>
 
     <!-- SOCIAL MEDIA MOBILE -->
-    <section class="flex main hidden-desktop">
+
+<!--
+    <section class="flex main" style="display: none; visibility: none;">
 
         
         <div class="section-social-media">
@@ -113,6 +128,7 @@
 
     </section>
 
+-->
     <!-- ART CONTENT (PORFOLIO) -->
     <div class="flex row art-content">
         <div class="start flex col info-side">
@@ -167,7 +183,7 @@
     <section class="flex about-me">
         <div class="flex">
             <div>
-                <img class="footer-profile-icon" src="data/icon.ico" alt="MarunK Profile">
+                <img class="footer-profile-icon no-context" src="data/icon.ico" alt="MarunK Profile">
             </div> 
             <div class="about-me-content">
                 <h2>About Me</h2>
