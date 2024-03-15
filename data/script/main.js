@@ -1,3 +1,32 @@
+const themeProperties = [
+    '--theme-accent',
+    '--theme-bg-color',
+]
+const themeValues = [
+    [
+        '#0bf',
+        '#035',
+    ],
+
+    [
+        '#f05',
+        '#503',
+    ],
+
+    [
+        '#f30',
+        '#533',
+    ],
+
+    [
+        '#fd0',
+        '#543',
+    ],
+
+]
+
+
+
 const button_list = [
     document.getElementById('mobile-instagram'),
     document.getElementById('mobile-twitter'),
@@ -11,9 +40,22 @@ let principal_character = document.getElementById('social-media-character');prin
 
 const trelloLink = "https://trello.com/b/2nSioGdD/marunk-work.json"
 
+
+let gallery_box = document.getElementById('gallery');
+const total_images = 5;
+const titles = [
+    "Maru v23",
+    "Teku v23",
+    "Yuki v23",
+    "Nogi v23",
+    "Miku Esper - Proyect Voltage",
+]
+
 function init() {
+    genRandomTheme(1);
     initSound();
     initButtons();
+    genGallery();
 
     detectDevice();
 
@@ -31,6 +73,29 @@ function init() {
     animation_fadeInit.play();
 
 }
+
+
+function genRandomTheme(total_themes) {
+
+    let x = Math.random() * total_themes;
+    x = Math.round(x)
+    if ( x == 0 ) { x=x+1; }
+
+    // SET CSS VARIABLES THEME
+
+    let root = document.querySelector(':root');
+    console.log ( themeProperties[0] + "  :  " + themeValues[x-1][0]);
+    for (let i=0; i<themeProperties.length; ++i) {
+        root.style.setProperty(themeProperties[i], themeValues[x-1][i]);
+    }
+
+    // SET CHARACTER THEME
+
+
+}
+
+
+
 
 function initSound() {
     effect3.volume = 1;
@@ -102,6 +167,18 @@ tabs.forEach((tab, index)=>{
     })
 
 })
+
+// GENERATE GALLERY
+
+function genGallery() {
+     for (let i = 1;  i <= total_images ; i++) {
+        gallery_box.innerHTML += `
+        <div class="gallery-image">
+            <a class="gallery-image" data-lightbox="portfolio" data-title="${titles[i-1]}" href="data/img/slides/${i}.png"><img src="data/img/slides/small/${i}.jpg" alt=""></a>
+        </div>
+        `;
+    }
+}
 
 
 // KANBAN BOARD
