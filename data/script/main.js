@@ -1,7 +1,7 @@
 const button_list = [
     document.getElementById('mobile-instagram'),
     document.getElementById('mobile-twitter'),
-    document.getElementById('mobile-pixiv'),/* 
+    document.getElementById('mobile-pixiv'),/*
     document.getElementById('Telegram') */
 ]
 let effect3 = new Audio('./data/audio/wave-in.wav');
@@ -14,7 +14,7 @@ const trelloLink = "https://trello.com/b/2nSioGdD/marunk-work.json"
 function init() {
     initSound();
     initButtons();
-    
+
     detectDevice();
 
     // Animation Fade-In
@@ -26,16 +26,16 @@ function init() {
           fill: 'forwards',
           duration: 1500
         });
-    
+
 
     animation_fadeInit.play();
-    
+
 }
 
 function initSound() {
     effect3.volume = 1;
     effect5.volume = 1;
-    
+
     var playPromise = effect5.play();
     //Validated if sounds was played
     if (playPromise !== undefined) {
@@ -55,7 +55,7 @@ function initButtons() {
             effect3.play()
         })
     // button.addEventListener( 'pointerenter', ()=>{});
-    })    
+    })
 }
 
 function detectDevice(){
@@ -68,11 +68,11 @@ function detectDevice(){
             console.log(`Your system is: MacOS`)
         } else if (/Linux/.test(navigator.userAgent)) {
             console.log(`Your system is: Linux`)
-        
+
         } else {
             console.log(`Your platform is hidden.. \n Nice`)
         }
-      
+
     }
 }
 
@@ -90,7 +90,7 @@ tabs.forEach((tab, index)=>{
     tab.addEventListener('click', (e)=>{
         tabs.forEach(tab=>{tab.classList.remove('tab-active')});
         tab.classList.add('tab-active')
-    
+
         var line = document.querySelector('.tabs-line');
         line.style.width = e.target.offsetWidth + "px";
         line.style.left = e.target.offsetLeft + "px";
@@ -117,12 +117,12 @@ fetch(trelloLink)
 
     // POR CADA LISTA DE LA TABLA
     data.lists.forEach(function(list){
-        
+
         html += `
             <div class="flex col kanban-list" id="${list.name.replace(/\s/g, "")}">
             <h3 class="kanban-list-title">${list.name}</h3>
         `// INICIAMOS LA LISTA
-        
+
         data.cards.forEach(function(card){
             // FILTRAMOS LAS CARTAS CORRESPONDIENTES A LA LISTA USANDO EL ID DE LA LISTA
             if (card.idList == list.id){
@@ -133,14 +133,29 @@ fetch(trelloLink)
                     `;
                     console.log(label.color + " | " + label.name)
                 });
+
                 //AGREGAMOS CADA CARTA EN EL HTML CON SUS ETIQUETAS
-                html += `
+                if(card.cover.scaled) {
+    			console.log(card.cover.scaled[5].url);
+			html += `
+                    <div class="flex col wrap kanban-card">
+		    	<div class="kanban-card-img flex">
+		    	<img src="${card.cover.scaled[5].url}">
+                    	</div>
+                        <h4 class="kanban-card-title">${card.name}</h4>
+                        ${labelsHtml}
+                    </div>
+                `;
+		} else {
+			html += `
                     <div class="flex row wrap kanban-card">
                         <h4 class="kanban-card-title">${card.name}</h4>
                         ${labelsHtml}
                     </div>
                 `;
-            }
+		}
+
+           }
         });
 
         html += `

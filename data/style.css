@@ -602,6 +602,20 @@ footer {
     padding: 3px 6px;
 }
 
+.kanban-card-img {
+	margin: 0.8rem 0.8rem;
+    	border-radius: calc(var(--section-border-radius) / 3);
+    	overflow: hidden;
+}
+
+.kanban-card-img img{
+    object-fit: cover;
+    -o-object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+    transform: scale(1.02);
+}
+
 /*  EITQUETAS DE COLOR COLORES WE */
 .yellow_light {
     background-color: rgb(238, 214, 0);
