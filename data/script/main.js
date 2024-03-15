@@ -4,6 +4,12 @@ const ELEMENT = [
     'Hate',
     'Ambition',
 ]
+const ELEMENT_BG_INFO = [
+    ["Devotion", "maru was been in a central park. Him was feeling conffortable around some flowers and him did some meditating there. Maybe too much."],
+    ["", ""],
+    ["", ""],
+    ["", ""],
+]
 
 const INFORMATION = [
     [
@@ -77,15 +83,27 @@ let presentation = document.getElementById('presentation');
 let gallery_box = document.getElementById('gallery');
 let username = document.getElementById('username');
 function copyUsername() {
-    navigator.clipboard
-        .writeText(username.innerText)
-        .then(console.log("copied"));
+    if (window.isSecureContext){
+        navigator.clipboard
+            .writeText(username.innerText)
+            .then(console.log("copied"));
+    }
+    let animation_clicked = username.animate([
+          { transform: 'scale(1.0, 1.0)'},
+          { transform: 'scale(0.8, 1.0)', offset: 0.08},
+          { transform: 'scale(1.0, 1.0)'}
+        ], {
+          fill: 'forwards',
+          duration: 400 }
+    );
+        animation_clicked.play();
 }
 
 
 function init() {
 
     genGallery();
+    genKanban();
     initSound();
     initButtons();
     detectDevice();
@@ -100,12 +118,20 @@ function genRandomTheme(total_themes) {
     if ( x == 0 ) { x=x+1; }
 
     let loader= document.getElementById('loader')
+    let bg_title = document.getElementById('element_bg_title')
+    console.log(bg_title)
+    bg_title.innerText = `${ELEMENT_BG_INFO[x-1][0]}`;
+    let bg_info = document.getElementById('element_bg_info')
+    bg_info.innerText = `${ELEMENT_BG_INFO[x-1][1]}`;
 
     loader.children[0].innerText = `${ELEMENT[x-1]}`;
     loader.children[0].style.opacity = 1;
 
+    let presentation_card = document.getElementsByClassName('presentation-card')[0]
+    presentation_card.style.background = 'linear-gradient(to left, transparent, #000000aa)';
     if (x == 3){
         presentation.style.flexDirection = "row-reverse";
+        presentation_card.style.background = 'linear-gradient(to right, transparent, #000000aa)';
     }
 
     // SET BACKGROUND THEME
@@ -237,6 +263,7 @@ tabs.forEach((tab, index)=>{
 
 var trello_labels = ['Instagram', 'Twitter', 'MarunK']
 
+function genKanban(){
 
 fetch(trelloLink)
   .then(response => response.json())
@@ -262,12 +289,26 @@ fetch(trelloLink)
                     `;
                 });
                 //AGREGAMOS CADA CARTA EN EL HTML CON SUS ETIQUETAS
-                html += `
+                if(card.cover.scaled) {
+    			console.log(card.cover.scaled[5].url);
+			html += `
+                    <div class="flex col wrap kanban-card">
+		    	<div class="kanban-card-img flex">
+		    	<img src="${card.cover.scaled[5].url}">
+                    	</div>
+                        <h4 class="kanban-card-title">${card.name}</h4>
+                        ${labelsHtml}
+                    </div>
+                `;
+		} else {
+			html += `
                     <div class="flex row wrap kanban-card">
                         <h4 class="kanban-card-title">${card.name}</h4>
                         ${labelsHtml}
                     </div>
                 `;
+		}
+
             }
         });
 
@@ -289,3 +330,4 @@ fetch(trelloLink)
     // Manejo de errores
     console.log('Trello JSON ERROR:', error);
   });
+}
