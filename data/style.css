@@ -793,7 +793,7 @@ footer {
 
 /* RESPONSIVE SECTION */
 
-@media only screen and (max-width:768px) {
+@media (max-aspect-ratio: 1) {
     .section-social-media{
         padding-left: 0px;
     }
@@ -842,6 +842,8 @@ footer {
     }
     
     .art-content {
+        
+        flex-direction: column;
         flex-wrap: wrap;
         min-height: 400px;
         height: auto;
@@ -874,8 +876,14 @@ footer {
 
 }
 
-@media only screen and (max-width:1024px) {
-    .hidden-tablet{
-        display: none;
+@media (max-aspect-ratio: 4/3) {
+    .info-side {
+        width: auto;
     }
+
+    .art-content {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
 }
