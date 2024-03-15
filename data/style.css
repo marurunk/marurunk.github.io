@@ -842,9 +842,7 @@ footer {
     }
     
     .art-content {
-        
         flex-direction: column;
-        flex-wrap: wrap;
         min-height: 400px;
         height: auto;
     }

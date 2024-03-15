@@ -9,9 +9,11 @@
 }
 
 .gallery-title {
+    margin-top: 2rem;
     position: relative;
     padding: 1rem;
-    color: var(--text-color-base);
+    /*color: var(--text-color-base);*/
+    color: #fff;
     font-size: 2rem;
     margin-bottom: 1rem;
 }
