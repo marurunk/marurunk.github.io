@@ -6,6 +6,7 @@
     display: flex;
     flex: 4 1 50%;
     width: 100%;
+    overflow-y: auto;
 }
 
 .gallery-title {
@@ -57,7 +58,7 @@
     display: flex; 
     gap: 7px;
     overflow: hidden;
-    margin: 4rem;
+    margin: 2rem 4rem;
     flex-wrap: wrap;
 }
 
@@ -71,6 +72,11 @@
 
 @media only screen and (max-width:1024px) {
     .gallery-image {
-    --gallery-size: 230px;
+        --gallery-size: 230px;
+    }
 }
+@media only screen and (max-width:616px) {
+    .portfolio {
+        width: calc(100% - 1rem);
+    }
 }
