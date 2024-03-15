@@ -871,17 +871,26 @@ footer {
         font-size: 3rem;
 
     }
+    .illustration-viewer {
+        border-radius: 0;
+    }
+    .info-side {
+        width: 100%;
+        border-radius: 0;
+    }
+
+
 
 }
 
 @media (max-aspect-ratio: 4/3) {
     .info-side {
-        width: auto;
+        width: 100%;
     }
-
     .art-content {
         flex-direction: column-reverse;
         height: auto;
+        border-radius: 0;
     }
 
 }
