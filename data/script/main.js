@@ -253,3 +253,13 @@ fetch(trelloLink)
     // Manejo de errores
     console.log('Trello JSON ERROR:', error);
   });
+
+const musicWidget= document.getElementById("music-container");
+
+const musicActivators = document.querySelectorAll('.music-activator');
+musicActivators.forEach((activator) => {
+activator.addEventListener("click", () => {
+musicWidget.classList.remove("music-translate");
+});
+});
+

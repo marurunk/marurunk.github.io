@@ -1,0 +1,33 @@
+.flex {
+    display: flex;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.start {
+    justify-content: start;
+}
+.end {
+    justify-content: end;
+}
+.col {
+    flex-direction: column;
+}
+.row {
+    flex-direction: row;
+}
+.img-center {
+    position: relative;
+    height: 60px;
+    width: 60px;
+}
+.hidden-desktop {
+    display: none;
+}
+.absolute {
+    position: absolute;
+}
+.over-hidden {
+    overflow: hidden;
+}

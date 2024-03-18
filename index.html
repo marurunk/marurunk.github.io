@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>MarunK Art</title>
+    <link rel="icon" type="image/jpeg" href="data/maru-ico.webp">
+
     <meta name="description" content="website of artist Marurunk">
 	<meta name="og:site_name" content="MarunK">
 
 
     <meta property="og:type" content="website">
 	<meta property="og:title" content="MarunK Art">
-	<meta property="og:description" content="Check out all platforms of artist Marurunk">
+	<meta property="og:description" content="Personal Website of @MarurunK">
 	<meta property="og:image:secure_url" content="https://marurunk.github.io/data/img/preview.jpg">
 	<meta property="og:image" content="https://github.com/marurunk/marurunk.github.io/blob/main/data/img/preview.jpg?raw=true">
 	<meta property="og:image:width" content="1366">
@@ -19,7 +21,7 @@
 	<meta property="og:url" content="https://marurunk.github.io">
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="MarunK Art" />
-    <meta property="twitter:description" content="All pratforms of Artist MarunK" />
+    <meta property="twitter:description" content="Personal Website of @MarurunK" />
     <meta property="twitter:image" content="https://marurunk.github.io/data/img/preview.jpg" />
 
     <meta name="theme-color" content="#0074ff">
@@ -28,10 +30,12 @@
     
     <link rel="stylesheet" href="data/style.css">
     <link rel="stylesheet" href="data/animations.css">
-    <link rel="icon" type="image/x-icon" href="data/icon.ico">
 
     <link rel="stylesheet" href="data/lightbox2/css/lightbox.css">
     <link rel="stylesheet" href="data/gallery.css">
+    <link rel="stylesheet" href="data/flex.css">
+
+    <link rel="stylesheet" href="data/music-player-widget/music.css">
 
 </head>
 <body id="init">
@@ -41,23 +45,23 @@
 
         <!-- HEADER & SOCIAL MEDIA-->
     <header>
-        <div class="flex row title-column">
-            <div class="icon-div">
-                <img class="header-icon" src="data/icon.ico" alt="MarunK Icon" height="60px" width="60px">
+        <div class="flex center title-column">
+            <div class="icon-div music-activator" id="maru">
+                <img class="header-icon" src="data/maru-ico.webp" alt="MarunK Icon" height="60px" width="60px">
             </div>
             <h3 class="title">MarunK Art</h3>
         </div>
         
-        <div class="flex row social-icons hidden-mobile">
-            <a class="flex social-icon" target="_blank" href="https://instagram.com/marurunk">
+        <div class="flex center row social-icons hidden-mobile">
+            <a class="flex center social-icon" target="_blank" href="https://instagram.com/marurunk">
                 <i class="fa-brands fa-instagram my-icon"></i>
                 <span class="hidden-tablet">Instagram</span>
             </a>
-            <a class="flex social-icon" target="_blank" href="https://www.pixiv.net/en/users/67082420">
+            <a class="flex center social-icon" target="_blank" href="https://www.pixiv.net/en/users/67082420">
                 <div class="pixiv-icon my-icon"></div>
                 <span class="hidden-tablet">Pixiv</span>
             </a>
-            <a class="flex social-icon" target="_blank" href="https://twitter.com/MarurunK">
+            <a class="flex center social-icon" target="_blank" href="https://twitter.com/MarurunK">
                 <i class="fa-brands fa-twitter my-icon"></i>
                 <span class="hidden-tablet">Twitter</span>
             </a>
@@ -68,79 +72,78 @@
 
 
     <!-- SOCIAL MEDIA MOBILE -->
-    <section class="flex main hidden-desktop">
+    <section class="flex center main hidden-desktop">
 
         
         <div class="section-social-media">
             
-            <div class="flex center" id="mobile-instagram">
+            <div class="flex center .img-center" id="mobile-instagram">
 
-                <div class="flex social-button instagram-div my-icon-button">
+                <div class="flex center social-button instagram-div my-icon-button">
                     <a href="http://instagram.com/marurunk" target="_blank" rel="noopener noreferrer" class=" fa-brands fa-instagram my-icon-button">
                     </a>
                 </div>
                 
             </div>
-            <div class="flex center" id="mobile-pixiv">
+            <div class="flex center .img-center" id="mobile-pixiv">
                 
                 <a href="http://www.pixiv.net/en/users/67082420" target="_blank" rel="noopener noreferrer" class="social-button">
                     <div class="pixiv-icon-button my-icon-button"></div>
                 </a>
             </div>
-            <div class="flex center" id="mobile-twitter">
+            <div class="flex center .img-center" id="mobile-twitter">
                 <a href="http://twitter.com/MarurunK" target="_blank" rel="noopener noreferrer" class="social-button fa-brands fa-twitter my-icon-button" ></a>
             </div>
             
         </div>
         
         
-        <div class="section-social-media-character flex center">
+        <div class="section-social-media-character flex center .img-center">
             <img id="social-media-character" src="./data/img/sprite_m.webp" alt="floating character">
         </div>
 
 
     </section>
     <!-- ART CONTENT (PORFOLIO) -->
-    <div class="flex art-content">
+    <div class="flex center art-content">
         <div class="start flex col info-side">
             
-            <div class="flex row tabs-box">
+            <div class="flex center row tabs-box">
                 <button class="end tab-bt">Comission</button>
-                <button class="flex tab-bt">Trello</button>
+                <button class="flex center tab-bt">Trello</button>
                 <button class="start flex tab-bt">More</button>
                 <div class="tabs-line"></div>
             </div>
 
             <div class="tabs-container">
-                <section class="flex col tab-content hidden more">
-                    <div class="flex col">
+                <section class="flex center col tab-content hidden more">
+                    <div class="flex center col">
                         <a href="https://drive.google.com/file/d/1y0K1ih3SGsuayPYrRDernkqkQKv2uO4D/view" target="_blank" rel="noopener noreferrer" class="social-button fa-solid fa-file-pdf my-icon-button"></a>
                         <p class="more-text">I don't know much about comissions yet so, this is my eraser yet. DM me without compromise.</p>
                     </div>
                     <p class="more-text">Thank you 🤍</p>
                 </section>
-                <section id="trello-board" class="flex row tab-content kanban-info">
+                <section id="trello-board" class="flex start row tab-content kanban-info">
                    <!--  <a href="https://trello.com/b/2nSioGdD/marunk-work" target="_blank">
                         <img class="absolute trello-icon social-icon" src="data/img/trello.png" alt="" srcset="">
                     </a> -->
                 </section>
-                <section class="col flex tab-content hidden more">
-                    <div class="flex col">
+                <section class="col flex center tab-content hidden more">
+                    <div class="flex center col">
                         <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#1a9ef0', 'M4M0JDDHC');kofiwidget2.draw();</script> 
                     </div>
-                    <div class="flex col">
+                    <div class="flex center col">
                         <a href="http://t.me/marurunk" target="_blank" rel="noopener noreferrer" class="social-button fa-brands fa-telegram my-icon-button"></a>
                         <p class="more-text">Personal garbage blog.</p>
                     </div>
                 </section>    
             </div>
             
-            <img src="data/img/bottom_decorator.gif" alt="decorator" class="hidden-mobile absolute decorator-image">
         </div>
 
-        <section class="flex col illustration-viewer gallery">
-            <h3 class="gallery-title flex">Illustrations</h3>
-            <div class="flex row portfolio" id="gallery">
+        <section class="flex center col illustration-viewer gallery">
+            <h3 class="gallery-title flex center">Illustrations</h3>
+            <div class="flex center row portfolio" id="gallery">
                 
             </div>
         </section>
@@ -155,12 +158,12 @@
     <section class="flex about-me">
         <div class="flex">
             <div>
-                <img class="footer-profile-icon" src="data/icon.ico" alt="MarunK Profile">
+                <img class="footer-profile-icon" src="data/noAI-circle.png" alt="MarunK Profile">
             </div> 
             <div class="about-me-content">
                 <h2>About Me</h2>
                 <p>Beginner Digital Artist, I like to create cool and elegant characters. I also like draw Cutie Art often. Vast intellectual curiosity.</p>
-                <p>I like 💛 <a target="_blank" href="https://youtube.com/watch?v=b6w86ywhN10&amp;feature=share">ONE OK ROCK</a>, Anime Artists, Indie Games, Osu!, <a target="_blank" href="https://duolingo.com/profile/marurunk">Duolingo</a>, Godot, Personal Development and <a target="_blank" href="https://www.youtube.com/watch?v=ZbheiwG6OZA">Monstercat</a>.</p>
+                <p>I like 💛 <a class="music-activator" id="one-ok-rock">ONE OK ROCK</a>, Anime Artists, Indie Games, Osu!, <a target="" href="https://duolingo.com/profile/marurunk">Duolingo</a>, Godot, Personal Development and <a class="music-activator" id="monstercat">Monstercat</a>.</p>
                 <p> Greetings Traveler r*$^@*$(^*).</p>
                 <p class="name">MarunK</p>
             </div>
@@ -170,7 +173,14 @@
             <p class="email">marurunkArt@gmail.com</p>
         </footer>
     </section>
-    </div>
+
+	<!--Music Player Widget-->
+<div class="music-translate" id="music-container"></div>
+<script src="data/music-player-widget/music.js"></script>
+	<!-- ----------------- -->
+
+
+</div>
 
 <script src="data/script/main.js"></script>  
 <script src="data/lightbox2/js/lightbox-plus-jquery.js"></script>  
@@ -197,5 +207,8 @@
       'opsz' 24;
     }
     </style>  
+
+
+
 </body>
 </html>
