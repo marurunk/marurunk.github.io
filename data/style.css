@@ -20,6 +20,10 @@
 
     --social-button-size: 2.2rem;
 
+    --kanban-bar-height: 0.4rem;
+    --kanban-bar-bg: #333;
+    --kanban-bar-fg: #f90;
+
     margin: 0px;    
     padding: 0px;
 
@@ -507,7 +511,7 @@ footer {
     color: rgb(255, 147, 23);
 }
 #Doing .kanban-card {
-    background-color: #ffc5787e;
+    background-color: #ffd;
 }
 #Done {
     opacity: 0.90;
@@ -542,11 +546,10 @@ footer {
 }
 
 .kanban-card {
-    gap: 0.5rem;
+    gap: 0.1rem;
     width: 100%;
-    align-items: center;
+    align-items: start;
     flex-grow: 1;
-    padding: 4px 0px;
     background-color: #2154fc3b;
     border-radius: calc(var(--section-border-radius) / 3);
     z-index: 4;
@@ -555,7 +558,7 @@ footer {
 }
 
 .kanban-card-title {
-    padding: 0;
+    padding: 0.4rem 0.4rem 0rem 0.4rem;
     margin: 0;
 }
 
@@ -564,14 +567,15 @@ footer {
     font-family: monospace;
     font-size: 0.65rem;
     color: white;
-    margin-bottom: 0.6rem;
-    border-radius: var(--section-border-radius);
+    margin: 0.4rem 0.4rem;
+    border-radius: calc(var(--section-border-radius) / 2 );
     z-index: 4;
-    padding: 3px 6px;
+    padding: 2px 9px;
+    transform: scale(1.0,0.85);
 }
 
 .kanban-card-img {
-	margin: 0.8rem 0.8rem;
+	margin: 0.4rem 0.4rem 0 0.4rem;
     	border-radius: calc(var(--section-border-radius) / 3);
     	overflow: hidden;
 }
@@ -583,6 +587,31 @@ footer {
     max-width: 100%;
     transform: scale(1.02);
 }
+
+.kanban-card-bar {
+	background: var(--kanban-bar-bg);
+	height:var(--kanban-bar-height);
+	width: 100%;
+} 
+.kanban-card-bar::after {
+	content: " ";
+	background: var(--kanban-bar-fg);
+	height:var(--kanban-bar-height);
+	width: var(--x-progress);
+	animation: bar-fade 3s ease-in-out infinite;
+}
+
+@keyframes bar-fade{
+0%{
+	opacity: 1.0;
+}
+50%{
+	opacity: 0.6;
+}
+100%{
+	opacity: 1.0;
+}
+} 
 
 /*  EITQUETAS DE COLOR COLORES WE */
 .yellow_light {

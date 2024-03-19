@@ -183,7 +183,6 @@ function genGallery() {
 
 // KANBAN BOARD
 
-var trello_labels = ['Instagram', 'Twitter', 'MarunK']
 
 
 fetch(trelloLink)
@@ -202,34 +201,59 @@ fetch(trelloLink)
 
         data.cards.forEach(function(card){
             // FILTRAMOS LAS CARTAS CORRESPONDIENTES A LA LISTA USANDO EL ID DE LA LISTA
-            if (card.idList == list.id){
+            if (card.idList == list.id && card.closed == false){
                 //GENERAMOS EL HTML DE LAS ETIQUETAS
-                var labelsHtml = ""
+                var labelsHtml = `<div class="kanban-labels row flex wrap"> `
                 card.labels.forEach(function(label){
                     labelsHtml += `<span class="kanban-label ${label.color}">` +label.name + `</span>
                     `;
                     console.log(label.color + " | " + label.name)
                 });
+                labelsHtml += `</div>`
 
-                //AGREGAMOS CADA CARTA EN EL HTML CON SUS ETIQUETAS
+		    //
+                // seleccionamos los que tienen cover
                 if(card.cover.scaled) {
-    			console.log(card.cover.scaled[5].url);
 			html += `
-                    <div class="flex col wrap kanban-card">
-		    	<div class="kanban-card-img flex">
+                    <div class="flex col kanban-card">
+		    	<div class="kanban-card-img flex col">
 		    	<img src="${card.cover.scaled[5].url}">
-                    	</div>
-                        <h4 class="kanban-card-title">${card.name}</h4>
+			`
+                // si tiene progreso
+			if (card.badges.checkItems > 0){
+				x = parseInt(card.badges.checkItemsChecked/card.badges.checkItems * 100) + "%";
+                    	html += `
+			<div class="kanban-card-bar flex" style="--x-progress:${x}"></div>
+			</div>`;
+
+			} else {
+                    	html += `</div>`;}
+			
+                        html += `<h4 class="kanban-card-title">${card.name}</h4>
                         ${labelsHtml}
-                    </div>
-                `;
+                    </div>`;
 		} else {
+
+			if (card.badges.checkItems > 0){
+
 			html += `
-                    <div class="flex row wrap kanban-card">
+                    <div class="flex col kanban-card">
+			<div class="kanban-card-bar flex" style="--x-progress:${x}"></div>
                         <h4 class="kanban-card-title">${card.name}</h4>
                         ${labelsHtml}
                     </div>
                 `;
+
+			}else{
+
+			html += `
+                    <div class="flex col kanban-card">
+                        <h4 class="kanban-card-title">${card.name}</h4>
+                        ${labelsHtml}
+                    </div>
+                `;
+
+			}
 		}
 
            }
