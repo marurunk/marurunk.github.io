@@ -7,6 +7,7 @@
     flex: 4 1 50%;
     width: 100%;
     overflow-y: auto;
+    align-items: center;
 }
 
 .gallery-title {
@@ -48,8 +49,8 @@
     display: flex; 
     justify-content: center;
     min-height: var(--gallery-size);
-    max-height: var(--gallery-size);
-    min-width: var(--gallery-size);
+    max-height: max(var(--gallery-size), 10vh);
+    min-width: max(var(--gallery-size), 20%);
     flex: 1 1 5%;
 
 }
@@ -78,5 +79,6 @@
 @media only screen and (max-width:616px) {
     .portfolio {
         width: calc(100% - 1rem);
+	margin: 2rem 0;
     }
 }

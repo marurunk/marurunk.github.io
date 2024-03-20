@@ -388,15 +388,15 @@ footer {
 .art-content {
     margin: 1.2vh 0;
     padding: 16px;
-    min-height: 390px;
-    height:82vh;
+    min-height: max(390px, 82vh);
     width: calc(100% - 32px - 2.4vh);
     border-radius: var(--section-border-radius);
     background: #0006327c;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
     flex-wrap: no-wrap;
     gap: 16px;
+    overflow: hidden;
 }
 
 .info-side {
@@ -592,6 +592,7 @@ footer {
 	background: var(--kanban-bar-bg);
 	height:var(--kanban-bar-height);
 	width: 100%;
+	z-index: 1;
 } 
 .kanban-card-bar::after {
 	content: " ";
@@ -599,6 +600,7 @@ footer {
 	height:var(--kanban-bar-height);
 	width: var(--x-progress);
 	animation: bar-fade 3s ease-in-out infinite;
+	z-index: 1;
 }
 
 @keyframes bar-fade{
@@ -673,8 +675,9 @@ footer {
     
     flex-grow: 4;
     min-width: 300px;
-    height:100%;
-    min-height: 400px;
+    min-height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .illustration-content{ 
     height: calc(100% - 30px);
@@ -842,6 +845,7 @@ footer {
         flex-direction: column;
         min-height: 400px;
         height: auto;
+	align-items: center;
     }
     .info-side {
         height:auto;
