@@ -599,19 +599,22 @@ footer {
 	background: var(--kanban-bar-fg);
 	height:var(--kanban-bar-height);
 	width: var(--x-progress);
-	animation: bar-fade 3s ease-in-out infinite;
+	animation: bar-fade 3.5s ease-in-out infinite;
 	z-index: 1;
 }
 
 @keyframes bar-fade{
 0%{
-	opacity: 1.0;
+	background: white;
 }
-50%{
-	opacity: 0.6;
+30%{
+	background: var(--kanban-bar-fg);
+}
+70%{
+	background: var(--kanban-bar-fg);
 }
 100%{
-	opacity: 1.0;
+	background: white;
 }
 } 
 
