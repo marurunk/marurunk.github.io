@@ -588,18 +588,37 @@ footer {
     transform: scale(1.02);
 }
 
-.kanban-card-bar {
+#Done .kanban-card-bar {
+	display: none;
+} 
+#Done .kanban-card-bar::after {
+	display: none;
+}
+#Doing .kanban-card-bar {
 	background: var(--kanban-bar-bg);
 	height:var(--kanban-bar-height);
 	width: 100%;
 	z-index: 1;
 } 
-.kanban-card-bar::after {
+#Doing .kanban-card-bar::after {
 	content: " ";
 	background: var(--kanban-bar-fg);
 	height:var(--kanban-bar-height);
 	width: var(--x-progress);
 	animation: bar-fade 3.5s ease-in-out infinite;
+	z-index: 1;
+}
+#ToDo.kanban-card-bar {
+	background: var(--kanban-bar-bg);
+	height:var(--kanban-bar-height);
+	width: 100%;
+	z-index: 1;
+} 
+#ToDo .kanban-card-bar::after {
+	content: " ";
+	background: var(--blue);
+	height:var(--kanban-bar-height);
+	width: var(--x-progress);
 	z-index: 1;
 }
 
