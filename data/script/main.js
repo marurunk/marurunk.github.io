@@ -189,6 +189,8 @@ fetch(trelloLink)
   .then(response => response.json())
   .then(data => {
 
+	  console.log(data);
+
     let html = ''
 
     // POR CADA LISTA DE LA TABLA
@@ -221,9 +223,9 @@ fetch(trelloLink)
 			`
                 // si tiene progreso
 			if (card.badges.checkItems > 0){
-				x = parseInt(card.badges.checkItemsChecked/card.badges.checkItems * 100) + "%";
+				var progress = parseInt(card.badges.checkItemsChecked/card.badges.checkItems * 100) + "%";
                     	html += `
-			<div class="kanban-card-bar flex" style="--x-progress:${x}"></div>
+			<div class="kanban-card-bar flex" style="--x-progress:${progress}"></div>
 			</div>`;
 
 			} else {
@@ -235,10 +237,11 @@ fetch(trelloLink)
 		} else {
 
 			if (card.badges.checkItems > 0){
+				var progress = parseInt(card.badges.checkItemsChecked/card.badges.checkItems * 100) + "%";
 
 			html += `
                     <div class="flex col kanban-card">
-			<div class="kanban-card-bar flex" style="--x-progress:${x}"></div>
+			<div class="kanban-card-bar flex" style="--x-progress:${progress}"></div>
                         <h4 class="kanban-card-title">${card.name}</h4>
                         ${labelsHtml}
                     </div>

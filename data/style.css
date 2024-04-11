@@ -608,7 +608,7 @@ footer {
 	animation: bar-fade 3.5s ease-in-out infinite;
 	z-index: 1;
 }
-#ToDo.kanban-card-bar {
+#ToDo .kanban-card-bar {
 	background: var(--kanban-bar-bg);
 	height:var(--kanban-bar-height);
 	width: 100%;
