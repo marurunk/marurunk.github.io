@@ -15,8 +15,20 @@ const oorPlaylist= [
 	url:"yoid71.mp3",cover:"3y0b2g.jpg"},
 ];
 const mcPlaylist= [
-{name:"Let You Go",album: "Monstercat Vol.1",artist: "Savoy ",
+{name:"Let You Go",album: "Monstercat Vol.1",artist: "Savoy",
 	url:"460d1x.mp3",cover:"1f6b8u.jpg"},
+{name:"Friends",album: "Monstercat Vol.1",artist: "Subtact ft. Bri Tolani",
+	url:"dx4thm.mp3",cover:"1f6b8u.jpg"},
+{name:"Ocean Eyes",album: "Monstercat Vol.1",artist: "Jay Cosmic",
+	url:"52a1wk.mp3",cover:"1f6b8u.jpg"},
+{name:"I'm Here",album: "LIFE IN JAPAN EP",artist: "Puppet & Foria",
+	url:"pk42js.mp3",cover:"y0ubfp.jpg"},
+{name:"Killing Giants",album: "LIFE IN JAPAN EP",artist: "Puppet & Murtagh ft. Caddock",
+	url:"uxlqnr.mp3",cover:"y0ubfp.jpg"},
+{name:"Chin Up",album: "LIFE IN JAPAN EP",artist: "Puppet ft. Azuria Sky",
+	url:"dgki96.mp3",cover:"y0ubfp.jpg"},
+{name:"Dynamo",album: "LIFE IN JAPAN EP",artist: "Puppet",
+	url:"2cfva4.mp3",cover:"y0ubfp.jpg"},
 ];
 let songIndex = 0;
 var songs = maruPlaylist;
