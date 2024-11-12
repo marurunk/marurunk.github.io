@@ -3,7 +3,7 @@
   position: fixed;
 }
 
-* {
+:root {
   --music-bg: #1c1f2b;
   --music-fg: #fff;
   --music-radius: 15px;

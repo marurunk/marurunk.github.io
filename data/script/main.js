@@ -34,26 +34,31 @@ const INFORMATION = [
 const themeProperties = [
     '--theme-accent',
     '--theme-bg-color',
+    '--theme-dark-color',
 ]
 const themeValues = [
     [
         '#0bf',
         '#035',
+        '#030e18',
     ],
 
     [
         '#f05',
         '#503',
+        '#16060f',
     ],
 
     [
         '#f30',
         '#533',
+        '#1c0606',
     ],
 
     [
         '#fd0',
         '#543',
+        '#1c1208',
     ],
 
 ]
