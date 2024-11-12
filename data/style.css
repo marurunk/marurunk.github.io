@@ -115,10 +115,6 @@ p {
     margin-bottom: 0.4rem;
 }
 
-footer {
-    flex-direction: column;
-}
-
 
 /* ----------BASICS--------- */
 
@@ -740,24 +736,18 @@ footer {
 
 .about-me {
     background-color: var(--ft);
-    flex-direction: column;
     width: auto;
-    align-items: center;
-    justify-content: center;
     border-radius: 28px;
+    padding: 3rem 4rem;
     margin: 3%;
     max-width: 1300px;
 }
 
 .about-me div {
-    flex-direction: row;
-    padding: 20px 20px 0px 20px;
-    align-items: center;
-    justify-content: center;
+    gap: 4rem;
 }
 
 .about-me-content {
-    
     width: auto;
 }
 
@@ -772,7 +762,6 @@ footer {
 .footer-profile-icon{
     display: flex;
     position: relative;
-    margin:10px 30px 0px 40px;
     height: 148px;
     
     border: 6px solid #fff;
